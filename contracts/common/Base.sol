@@ -93,7 +93,7 @@ contract Base {
         return msg.data;
     }
 
-    function compareString(string memory _string1, string memory _string2) internal view returns(bool) {
+    function compareString(string memory _string1, string memory _string2) internal pure returns(bool) {
         if(bytes(_string1).length != bytes(_string2).length) {
             return false;
         } else {

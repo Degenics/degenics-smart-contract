@@ -53,7 +53,7 @@ contract EternalStorage {
         addressStorage[keccak256(abi.encodePacked("User.address", index))] = msg.sender;
         uIntStorage[keccak256(abi.encodePacked("User.index", msg.sender))] = index;
         stringStorage[keccak256(abi.encodePacked("User.role",msg.sender))] = "owner";
-
+        addressStorage[keccak256(abi.encodePacked("owner"))] = msg.sender;
     }
 
     function getAddress(bytes32 _key) external view returns (address) {
