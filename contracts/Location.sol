@@ -32,7 +32,7 @@ contract Location is Base {
     }
 
     function countryByIndex(uint index) public view returns(string memory){
-        eternalStorage.getString(keccak256(abi.encodePacked("country", index)));
+        return eternalStorage.getString(keccak256(abi.encodePacked("country", index)));
     }
 
     function countCity(string memory country) public view returns(uint){

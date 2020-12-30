@@ -13,88 +13,71 @@ import "./Escrow.sol";
 
 contract Degenics is Base {
 
-
-    enum SpecimenStatus{ OPEN, PAID, SEND, RECEIVE, TESTED, SUCCESS, FAIL }
-
-
     Location location;
     Account account;
     Specimen specimen;
 
 
     event NewLab(address account, string name, string country, string city);
-    event NewService(address account, string name, string service);
+    event NewService(address labAccount, string name, string service);
     event NewSpecimen(address labAccount, string Code);
 
-    modifier onlyLab() {
-        require(roleHas("lab",msg.sender),
-         "Only Lab" );
-        _;
-    }
-
+    
     constructor(address _storage, address _account, address _specimen, address _location ) public Base(_storage) {
         location = Location(_location);
         account = Account(_account);
         specimen = Specimen(_specimen);
-
     }
 
-    function registerLab(address _account, string memory name, 
-        string memory country, string memory city) public onlySuperUser{
-
-        require( eternalStorage.getUint(keccak256(abi.encodePacked("lab.index", _account))) ==0, "Already register" );
-
-        account.register(_account, "lab");
-        location.register(country, city);
-
-        uint index = eternalStorage.addUint(keccak256(abi.encodePacked("lab.count")), 1);
-        eternalStorage.setUint(keccak256(abi.encodePacked("lab.index", _account)), index);
-
-        index = eternalStorage.addUint(keccak256(abi.encodePacked("lab.location",country, city)), 1);
-        eternalStorage.setAddress(keccak256(abi.encodePacked("lab.location",country, city, index)), _account);
-        eternalStorage.setString(keccak256(abi.encodePacked("lab.name", _account)), name);
-        eternalStorage.setString(keccak256(abi.encodePacked("lab.country", _account)), country);
-        eternalStorage.setString(keccak256(abi.encodePacked("lab.city", _account)), city);
-        emit NewLab(_account, name, country, city);
-    }
     
-    function registerService(string memory code, string memory serviceName, uint price) public onlyLab{
-        require(eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.code", msg.sender, code))) == 0, "Code already register");
-        uint index = eternalStorage.addUint(keccak256(abi.encodePacked("lab.service.count", msg.sender)), 1);
-        eternalStorage.setUint(keccak256(abi.encodePacked("lab.service.code", msg.sender, code)), index);
-        eternalStorage.setString(keccak256(abi.encodePacked("lab.service.code", msg.sender, index )), code);
-        eternalStorage.setString(keccak256(abi.encodePacked("lab.service.name", msg.sender, code)), serviceName );
-        eternalStorage.setUint(keccak256(abi.encodePacked("lab.service.price", msg.sender, code)), price );
-        emit NewService(msg.sender, code, serviceName);
-    }
 
     function labCount(string memory country, string memory city) public view returns(uint){
         return  eternalStorage.getUint(keccak256(abi.encodePacked("lab.location",country, city)));
     }
 
-    function labByIndex(string memory _country, string memory _city, uint index) public view returns(address labAccount, string memory name, string memory country, string memory city){
-        address account = eternalStorage.getAddress(keccak256(abi.encodePacked("lab.location", _country,_city, index)));
-        return labByAccount(account);
+    function labByIndex(string memory _country, string memory _city, uint index) public view 
+        returns(address labAccount, string memory name, string memory country, string memory city, 
+        string memory labAddress, string memory labLogo, string memory labUrl, string memory additionalData){
+        
+        labAccount = eternalStorage.getAddress(keccak256(abi.encodePacked("lab.location", _country,_city, index)));
+        return labByAccount(labAccount);
     }
 
     function labByAccount(address _account) public view 
-        returns(address labAccount, string memory name, string memory country, string memory city){
+        returns(address labAccount, string memory name, string memory country, string memory city, 
+        string memory labAddress, string memory labLogo, string memory labUrl, string memory additionalData){
            
         name = eternalStorage.getString(keccak256(abi.encodePacked("lab.name", _account)));
         country = eternalStorage.getString(keccak256(abi.encodePacked("lab.country", _account)));
         city = eternalStorage.getString(keccak256(abi.encodePacked("lab.city", _account))); 
-        labAccount = _account;   
+        labAddress =  eternalStorage.getString(keccak256(abi.encodePacked("lab.address", _account)));
+        labLogo  =  eternalStorage.getString(keccak256(abi.encodePacked("lab.logo", _account)));
+        labUrl =  eternalStorage.getString(keccak256(abi.encodePacked("lab.url", _account)));
+        additionalData =  eternalStorage.getString(keccak256(abi.encodePacked("lab.additionalData", _account)));
+        labAccount = _account;  
+        return (labAccount, name, country, city, labAddress, labLogo, labUrl, additionalData); 
     }
 
     function serviceCount(address labAccount) public view returns(uint){
         return eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.count", labAccount)));
     }
 
-    function serviceByIndex(address labAccount, uint index) public view returns(string memory code, string memory serviceName, uint price){
+    // string memory code, string memory serviceName, string memory description, uint price, 
+    //     string memory icon, string memory image, string memory url
+
+    function serviceByIndex(address labAccount, uint index) public view 
+    returns(string memory code, string memory serviceName, string memory description, uint price, 
+    string memory icon, string memory image, string memory url ){
         code = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.code", labAccount, index )));
         serviceName = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.name", labAccount, code)));
         price = eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", labAccount, code)));
-        return(code, serviceName, price);
+        
+        description = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.description", labAccount, code)));
+        icon = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.icon", labAccount, code)));
+        image = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.image", labAccount, code)));
+        url = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.url", labAccount, code)));
+
+        return(code, serviceName, description,  price, icon, image, url);
     }
 
     function registerSpecimen(address labAccount, string memory serviceCode) public {
@@ -159,6 +142,14 @@ contract Degenics is Base {
            EscrowFactory ef = EscrowFactory(_address);
            return ef.createEscrow(buyer, seller, amount);
        }
+    }
+
+    function emitNewLab(address _account, string memory name, string memory country, string memory city)public {
+        emit NewLab(_account, name, country, city);
+    }
+
+    function emitNewService(address labAccount, string memory name, string memory service)public {
+        emit NewService(labAccount, name, service);
     }
 
 

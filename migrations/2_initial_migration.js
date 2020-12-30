@@ -1,5 +1,7 @@
 const EternalStorage = artifacts.require("EternalStorage");
 const Degenics = artifacts.require("Degenics");
+const Lab = artifacts.require("Lab");
+const DegenicsLog = artifacts.require("DegenicsLog");
 const Account = artifacts.require("Account");
 const Location = artifacts.require("Location");
 const Specimen = artifacts.require("Specimen");
@@ -18,6 +20,8 @@ function addContractInfo(name, address){
 
 const listArtifact = {
     EternalStorage,
+    DegenicsLog,
+    Lab,
     Account, 
     Location, 
     Specimen,
@@ -54,6 +58,12 @@ module.exports = async function(deployer,network, accounts) {
                 contractInfo.Specimen.address, contractInfo.Location.address)
             addContractInfo(artifact.contractName, artifact.address);
             instances[artifact.contractName] = await artifact.deployed()
+        }else if(artifact.contractName =="Specimen"){
+            console.log('Deployed :',artifact.contractName)
+            await deployer.deploy(artifact, 
+                contractInfo.EternalStorage.address, contractInfo.DegenicsLog.address)
+            addContractInfo(artifact.contractName, artifact.address);
+            instances[artifact.contractName] = await artifact.deployed()
         } else if(artifact.abi[0].inputs.length == 0){
             console.log('Deployed :',artifact.contractName)
             await deployer.deploy(artifact)
@@ -79,19 +89,33 @@ module.exports = async function(deployer,network, accounts) {
 
     if(network == 'development'){
         try {
-            await instances.Degenics.registerLab(accounts[1], 'Lab 1', 'Indenesia', 'Jakarta');
-            await instances.Degenics.registerLab(accounts[2], 'Lab 2', 'Indenesia', 'Jakarta');
-            await instances.Degenics.registerLab(accounts[3], 'Lab 3', 'Indenesia', 'Surabaya');
+            await instances.Lab.register(accounts[1], 'Lab 1', 'Indenesia', 'Jakarta');
+            await instances.Lab.register(accounts[2], 'Lab 2', 'Indenesia', 'Jakarta');
+            await instances.Lab.register(accounts[3], 'Lab 3', 'Indenesia', 'Surabaya');
+            await instances.Lab.register(accounts[4], 'Lab KL', 'Malaysia', 'Kuala Lumpur');
+            await instances.Lab.register(accounts[5], 'Lab KL 1', 'Malaysia', 'Kuala Lumpur');
             let labCount = await instances.Degenics.labCount( 'Indenesia', 'Jakarta');
             console.log(labCount)
+            console.log(await instances.Location.countCountry())
+            console.log(await instances.Location.countryByIndex(1))
+            console.log(await instances.Location.cityByIndex("Indenesia", 1))
+
+            await instances.Lab.updateData("url", "url lab1", {from: accounts[1]})
+            await instances.Lab.updateData("logo", "logo lab1", {from: accounts[1]})
+            await instances.Lab.updateData("address", "Jl. Sukoarno Hatta no.1", {from: accounts[1]})
+
+
+        //     ring memory code, string memory serviceName, string memory description, uint price, 
+        // string memory icon, string memory image, string memory url
+
             console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',1))
             console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',2))
-            await instances.Degenics.registerService('TEST-1', 'Test ttile 1 lab 1', 100, {from:accounts[1]});
-            await instances.Degenics.registerService('TEST-2', 'Test ttile 2 lab 1', 100, {from:accounts[1]});
-            await instances.Degenics.registerService('TEST-3', 'Test ttile 3 lab 1', 100, {from:accounts[1]});
+            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[1]});
+            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 1', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[1]});
+            await instances.Lab.registerService('TEST-3', 'Test title 3 lab 1', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[1]});
 
-            await instances.Degenics.registerService('TEST-1', 'Test ttile 1 lab 2', 100, {from:accounts[2]});
-            await instances.Degenics.registerService('TEST-2', 'Test ttile 2 lab 3', 100, {from:accounts[2]});
+            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 2', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[2]});
+            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 3', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[2]});
 
             console.log(await instances.Degenics.serviceCount(accounts[1]))
             console.log(await instances.Degenics.serviceCount(accounts[2]))
@@ -107,12 +131,6 @@ module.exports = async function(deployer,network, accounts) {
             console.log(await instances.Degenics.specimenByNumber(number))
             let excrow = await instances.Degenics.getEscrow(number); 
             console.log(excrow)
-
-            
-
-
-
-
 
 
         } catch (error) {
