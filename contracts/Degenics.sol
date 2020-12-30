@@ -10,6 +10,7 @@ import "./Specimen.sol";
 import "./Location.sol";
 import "./EscrowFactory.sol";
 import "./Escrow.sol";
+import "./Lab.sol";
 
 contract Degenics is Base {
 
@@ -46,16 +47,9 @@ contract Degenics is Base {
     function labByAccount(address _account) public view 
         returns(address labAccount, string memory name, string memory country, string memory city, 
         string memory labAddress, string memory labLogo, string memory labUrl, string memory additionalData){
-           
-        name = eternalStorage.getString(keccak256(abi.encodePacked("lab.name", _account)));
-        country = eternalStorage.getString(keccak256(abi.encodePacked("lab.country", _account)));
-        city = eternalStorage.getString(keccak256(abi.encodePacked("lab.city", _account))); 
-        labAddress =  eternalStorage.getString(keccak256(abi.encodePacked("lab.address", _account)));
-        labLogo  =  eternalStorage.getString(keccak256(abi.encodePacked("lab.logo", _account)));
-        labUrl =  eternalStorage.getString(keccak256(abi.encodePacked("lab.url", _account)));
-        additionalData =  eternalStorage.getString(keccak256(abi.encodePacked("lab.additionalData", _account)));
-        labAccount = _account;  
-        return (labAccount, name, country, city, labAddress, labLogo, labUrl, additionalData); 
+        
+        Lab lab = Lab(eternalStorage.getAddress(keccak256(abi.encodePacked("contract.address", "Lab"))));
+        return lab.labByAccount(_account);
     }
 
     function serviceCount(address labAccount) public view returns(uint){

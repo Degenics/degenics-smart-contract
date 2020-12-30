@@ -104,10 +104,6 @@ module.exports = async function(deployer,network, accounts) {
             await instances.Lab.updateData("logo", "logo lab1", {from: accounts[1]})
             await instances.Lab.updateData("address", "Jl. Sukoarno Hatta no.1", {from: accounts[1]})
 
-
-        //     ring memory code, string memory serviceName, string memory description, uint price, 
-        // string memory icon, string memory image, string memory url
-
             console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',1))
             console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',2))
             await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[1]});
@@ -136,6 +132,10 @@ module.exports = async function(deployer,network, accounts) {
         } catch (error) {
             console.log(error)
         }
+    }
+
+    for(let key in listArtifact){
+        await jsonfile.writeFile(`./build/abi/${key}.json`, listArtifact[key].abi, {spaces: 2, EOL: '\r\n'});
     }
 
     await jsonfile.writeFile(filename, contractInfo, {spaces: 2, EOL: '\r\n'});

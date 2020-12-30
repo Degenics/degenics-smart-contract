@@ -17,6 +17,11 @@ contract Lab is Base {
         _;
     }
 
+    modifier onlyDegenicsContract() {
+        require(eternalStorage.getAddress(keccak256(abi.encodePacked("contract.address", "Degenics"))) == msg.sender, "Only registred contract" );
+        _;
+    }
+
     constructor(address _storage ) public Base(_storage) {
     
     }
@@ -47,6 +52,21 @@ contract Lab is Base {
     function updateData(string memory field, string memory data) public onlyLab{
         eternalStorage.setString(keccak256(abi.encodePacked("lab.", field, msg.sender)), data);
     }
+
+    function labByAccount(address _account) public view onlyDegenicsContract
+        returns(address labAccount, string memory name, string memory country, string memory city, 
+        string memory labAddress, string memory labLogo, string memory labUrl, string memory additionalData){
+           
+        name = eternalStorage.getString(keccak256(abi.encodePacked("lab.name", _account)));
+        country = eternalStorage.getString(keccak256(abi.encodePacked("lab.country", _account)));
+        city = eternalStorage.getString(keccak256(abi.encodePacked("lab.city", _account))); 
+        labAddress =  eternalStorage.getString(keccak256(abi.encodePacked("lab.address", _account)));
+        labLogo  =  eternalStorage.getString(keccak256(abi.encodePacked("lab.logo", _account)));
+        labUrl =  eternalStorage.getString(keccak256(abi.encodePacked("lab.url", _account)));
+        additionalData =  eternalStorage.getString(keccak256(abi.encodePacked("lab.additionalData", _account)));
+        labAccount = _account;  
+        return (labAccount, name, country, city, labAddress, labLogo, labUrl, additionalData); 
+    }
     
     function registerService(string memory code, string memory serviceName, string memory description, uint price, 
         string memory icon, string memory image, string memory url) public onlyLab{
@@ -75,3 +95,5 @@ contract Lab is Base {
     }
 
 }
+
+//0xcba7e4441e58db5b9f63da77acec09f6833a2c44a4ef72871580ee5c41a37166
