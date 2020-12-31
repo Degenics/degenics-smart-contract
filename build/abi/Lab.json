@@ -81,6 +81,22 @@
     "signature": "0xbddbb023"
   },
   {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "name": "activeLab",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x2f7c34ec"
+  },
+  {
     "constant": true,
     "inputs": [
       {
@@ -113,29 +129,46 @@
       },
       {
         "internalType": "string",
-        "name": "labAddress",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "labLogo",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "labUrl",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
         "name": "additionalData",
         "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
       }
     ],
     "payable": false,
     "stateMutability": "view",
     "type": "function",
     "signature": "0xed01c666"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "labAccount",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "code",
+        "type": "string"
+      }
+    ],
+    "name": "checkActive",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x2f15ed7b"
   },
   {
     "constant": false,
@@ -159,21 +192,6 @@
         "internalType": "uint256",
         "name": "price",
         "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "icon",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "image",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "url",
-        "type": "string"
       }
     ],
     "name": "registerService",
@@ -181,7 +199,80 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0xeb8b4b4c"
+    "signature": "0x981e7c39"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "labAccount",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "serviceByIndex",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "code",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "serviceName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "price",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "additionalData",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x905110d8"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "code",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "name": "activeService",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf59887ac"
   },
   {
     "constant": false,

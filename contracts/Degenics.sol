@@ -38,40 +38,29 @@ contract Degenics is Base {
 
     function labByIndex(string memory _country, string memory _city, uint index) public view 
         returns(address labAccount, string memory name, string memory country, string memory city, 
-        string memory labAddress, string memory labLogo, string memory labUrl, string memory additionalData){
+        string memory additionalData, bool active){
         
         labAccount = eternalStorage.getAddress(keccak256(abi.encodePacked("lab.location", _country,_city, index)));
         return labByAccount(labAccount);
     }
 
     function labByAccount(address _account) public view 
-        returns(address labAccount, string memory name, string memory country, string memory city, 
-        string memory labAddress, string memory labLogo, string memory labUrl, string memory additionalData){
+        returns(address labAccount, string memory name, string memory country, string memory city,
+        string memory additionalData, bool active){
         
-        Lab lab = Lab(eternalStorage.getAddress(keccak256(abi.encodePacked("contract.address", "Lab"))));
-        return lab.labByAccount(_account);
+        return getLabInstance().labByAccount(_account);
     }
 
     function serviceCount(address labAccount) public view returns(uint){
         return eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.count", labAccount)));
     }
 
-    // string memory code, string memory serviceName, string memory description, uint price, 
-    //     string memory icon, string memory image, string memory url
-
+    
     function serviceByIndex(address labAccount, uint index) public view 
-    returns(string memory code, string memory serviceName, string memory description, uint price, 
-    string memory icon, string memory image, string memory url ){
-        code = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.code", labAccount, index )));
-        serviceName = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.name", labAccount, code)));
-        price = eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", labAccount, code)));
+    returns(string memory code, string memory serviceName, string memory description, uint price, string memory additionalData, 
+    bool active){
         
-        description = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.description", labAccount, code)));
-        icon = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.icon", labAccount, code)));
-        image = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.image", labAccount, code)));
-        url = eternalStorage.getString(keccak256(abi.encodePacked("lab.service.url", labAccount, code)));
-
-        return(code, serviceName, description,  price, icon, image, url);
+        return getLabInstance().serviceByIndex(labAccount, index);
     }
 
     function registerSpecimen(address labAccount, string memory serviceCode) public {
@@ -114,15 +103,22 @@ contract Degenics is Base {
         specimen.receiveSpecimen(number, remark);
     }
 
+    function rejectSpecimen(bytes32  number, string memory remark) public {
+        specimen.rejectSpecimen(number, remark);
+    }
+
     function analysisSucces(bytes32  number, string memory file, string memory remark) public {
         specimen.analysisSucces(number, file, remark);
-        address payable escrowWallet = address(uint160(getEscrow(number)));
-        Escrow instance = Escrow(escrowWallet);
-        instance.forwardToSeller();
+        getEscrowInstance(number).forwardToSeller();
+    }
+
+    function getFile(bytes32 number) public view returns(string memory file){
+        specimen.getFile(number);
     }
 
     function analysisFail(bytes32  number, string memory remark) public {
         specimen.analysisFail(number, remark);
+        getEscrowInstance(number).refundToBuyer();
     }
 
     function escrowBalance(bytes32 number) internal view returns(uint){
@@ -144,6 +140,17 @@ contract Degenics is Base {
 
     function emitNewService(address labAccount, string memory name, string memory service)public {
         emit NewService(labAccount, name, service);
+    }
+
+    function getEscrowInstance(bytes32 number) internal returns(Escrow){
+        address payable escrowWallet = address(uint160(getEscrow(number)));
+        Escrow instance = Escrow(escrowWallet);
+        return instance;
+    }
+
+    function getLabInstance()internal view returns (Lab){
+        Lab lab = Lab(eternalStorage.getAddress(keccak256(abi.encodePacked("contract.address", "Lab"))));
+        return lab;
     }
 
 

@@ -317,5 +317,27 @@
     "stateMutability": "nonpayable",
     "type": "function",
     "signature": "0x2b6db611"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "number",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getFile",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "file",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x473aa2a5"
   }
 ]

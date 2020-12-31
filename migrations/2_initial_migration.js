@@ -106,12 +106,12 @@ module.exports = async function(deployer,network, accounts) {
 
             console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',1))
             console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',2))
-            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[1]});
-            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 1', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[1]});
-            await instances.Lab.registerService('TEST-3', 'Test title 3 lab 1', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[1]});
+            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100,  {from:accounts[1]});
+            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 1', 'desciption 1', 100,  {from:accounts[1]});
+            await instances.Lab.registerService('TEST-3', 'Test title 3 lab 1', 'desciption 1', 100,  {from:accounts[1]});
 
-            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 2', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[2]});
-            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 3', 'desciption 1', 100, 'icon', 'image', 'url', {from:accounts[2]});
+            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 2', 'desciption 1', 100, {from:accounts[2]});
+            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 3', 'desciption 1', 100, {from:accounts[2]});
 
             console.log(await instances.Degenics.serviceCount(accounts[1]))
             console.log(await instances.Degenics.serviceCount(accounts[2]))
@@ -120,7 +120,9 @@ module.exports = async function(deployer,network, accounts) {
             console.log(await instances.Degenics.serviceByIndex(accounts[1], 2))
             console.log(await instances.Degenics.serviceByIndex(accounts[1], 3))
 
-            await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', {from: accounts[5]})
+            await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', {from: accounts[8]})
+            await instances.Degenics.registerSpecimen(accounts[1],'TEST-1', {from: accounts[9]})
+            await instances.Degenics.registerSpecimen(accounts[1],'TEST-2', {from: accounts[7]})
 
             let number = await instances.Degenics.getLastNumber({from: accounts[5]})
             console.log(number)
@@ -128,6 +130,8 @@ module.exports = async function(deployer,network, accounts) {
             let excrow = await instances.Degenics.getEscrow(number); 
             console.log(excrow)
 
+            console.log(await instances.Degenics.specimenCount({from: accounts[1]}))
+            console.log(await instances.Degenics.specimenByIndex(1, {from: accounts[1]}))
 
         } catch (error) {
             console.log(error)

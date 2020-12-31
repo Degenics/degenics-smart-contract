@@ -18,6 +18,11 @@ contract Specimen is Base {
         require(eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))) == tx.origin, "Only Lab");
         _;
     }
+
+    modifier onlySpecimenOwner(bytes32 number){
+        require(eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.owner",number ))) == tx.origin, "Only Owner specimen");
+        _;
+    }    
     
     constructor(address _storage, address _degenicsLog ) public Base(_storage) {
         degenicsLog = DegenicsLog(_degenicsLog);
@@ -69,38 +74,35 @@ contract Specimen is Base {
         return escrow.balance;
     }
 
-    function sendSpecimen(bytes32  number, string memory remark) public onlyDegenicsContract {
-        require(eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.owner",number ))) == tx.origin, "Only specimen owner");
-        require(compareString(getStatus(number), "New") && 
-            escrowBalance(number) >=  checkPrice(number), "Only paid test");        
-        eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.status",number )), "Sending"); 
+    function sendSpecimen(bytes32  number, string memory remark) public onlyDegenicsContract onlySpecimenOwner(number) {
+       require(checkStatus(number, "New") && 
+            escrowBalance(number) >=  checkPrice(number), "Only paid test");  
+        setStatus(number, "Sending");
         degenicsLog.addSpecimenLog(number, "send", remark);
     }
 
     function receiveSpecimen(bytes32  number, string memory remark) public onlyDegenicsContract onlyLab(number) {
-        require(compareString(getStatus(number), "Sending") || (compareString(getStatus(number), "New") &&   escrowBalance(number) >=  checkPrice(number)) , "Only sending specimen" );
-        eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.status",number )), "Received");
+        require(checkStatus(number, "Sending") || (checkStatus(number, "New") &&   escrowBalance(number) >=  checkPrice(number)) , "Only sending specimen" );
+        setStatus(number, "Received");
         degenicsLog.addSpecimenLog(number, "receive", remark);
     }
 
     function rejectSpecimen(bytes32  number, string memory remark) public onlyDegenicsContract onlyLab(number) {
-        require(compareString(getStatus(number), "Sending") || (compareString(getStatus(number), "New") &&   escrowBalance(number) >=  checkPrice(number)) , "Only sending specimen" );
-        eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.status",number )), "Reject");
+        require(checkStatus(number, "Sending") || (checkStatus(number, "New") &&   escrowBalance(number) >=  checkPrice(number)) , "Only sending specimen" );
+        setStatus(number, "Reject");
         degenicsLog.addSpecimenLog(number, "reject", remark);
     }
 
     function analysisSucces(bytes32  number, string memory file, string memory remark) public onlyDegenicsContract onlyLab(number) {
-        require(compareString(getStatus(number), "Received"), "Only Received specimen" );
-        eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.status",number )), "Succes");
+        require(checkStatus(number, "Received"), "Only Received specimen" );
+        setStatus(number, "Succes");
         degenicsLog.addSpecimenLog(number, "succes", remark);
         eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.file",number)), file);
     }
 
     function analysisFail(bytes32  number, string memory remark) public onlyDegenicsContract onlyLab(number) {
-        // string memory status = eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.status",number ))); 
         require(compareString(getStatus(number), "Received"), "Only Received specimen" );
         degenicsLog.addSpecimenLog(number, "fail", remark);
-        eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.remark",number, "Failed" )), remark);
     }
 
     function checkPrice(bytes32  number) internal returns(uint){
@@ -115,8 +117,21 @@ contract Specimen is Base {
         return degenicsLog.specimenLogByIndex(number, _index);
     }
 
+    function setStatus(bytes32 number, string memory status) internal {
+        eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.status",number )), status);
+    }
+
     function getStatus(bytes32 number) internal view returns(string memory){
         return eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.status",number )));       
     }
+
+    function checkStatus(bytes32 number, string memory status) internal view returns(bool){
+        return compareString(getStatus(number), "Sending");
+    }
+
+    function getFile(bytes32 number) public view onlyDegenicsContract onlySpecimenOwner(number)  returns(string memory file){
+        return eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.file",number)));
+    }
+    
 
 }

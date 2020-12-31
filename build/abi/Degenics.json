@@ -191,23 +191,13 @@
       },
       {
         "internalType": "string",
-        "name": "labAddress",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "labLogo",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "labUrl",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
         "name": "additionalData",
         "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
       }
     ],
     "payable": false,
@@ -248,23 +238,13 @@
       },
       {
         "internalType": "string",
-        "name": "labAddress",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "labLogo",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "labUrl",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
         "name": "additionalData",
         "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
       }
     ],
     "payable": false,
@@ -332,18 +312,13 @@
       },
       {
         "internalType": "string",
-        "name": "icon",
+        "name": "additionalData",
         "type": "string"
       },
       {
-        "internalType": "string",
-        "name": "image",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "url",
-        "type": "string"
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
       }
     ],
     "payable": false,
@@ -552,6 +527,27 @@
       },
       {
         "internalType": "string",
+        "name": "remark",
+        "type": "string"
+      }
+    ],
+    "name": "rejectSpecimen",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x42438523"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "number",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
         "name": "file",
         "type": "string"
       },
@@ -567,6 +563,28 @@
     "stateMutability": "nonpayable",
     "type": "function",
     "signature": "0xe77ebf46"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "number",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getFile",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "file",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x473aa2a5"
   },
   {
     "constant": false,

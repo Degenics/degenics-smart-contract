@@ -1,50 +1,50 @@
 {
   "EternalStorage": {
     "name": "EternalStorage",
-    "address": "0xEEC5735f369F5c74D84879233669BE5135f4d277",
+    "address": "0xBd4BF49482E57A6722373c8354aC0c5fdF9E738A",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:41.589Z"
+    "lastUpdate": "2020-12-31T21:09:59.967Z"
   },
   "Account": {
     "name": "Account",
-    "address": "0x36EBdD435F3C8fefAAc94bC42f9c8216dc21ea56",
+    "address": "0x2B912Bf868cE79A1fCBF98aA3afe87e41e5826Ba",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:43.403Z"
+    "lastUpdate": "2020-12-31T21:10:01.700Z"
   },
   "Location": {
     "name": "Location",
-    "address": "0x8020828AdC4968056cf979738218DcC07b846a8d",
+    "address": "0xBCC0090F537F59762AA6708f1D5473fd5aC773E5",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:43.836Z"
+    "lastUpdate": "2020-12-31T21:10:02.377Z"
   },
   "Degenics": {
     "name": "Degenics",
-    "address": "0x2055AcE47afd6f7Ed8eEDfBf769c8e333c801EC9",
+    "address": "0x127F06d1DBD789E783fAeD8D7EC08b019b112879",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:45.838Z"
+    "lastUpdate": "2020-12-31T21:10:04.925Z"
   },
   "EscrowFactory": {
     "name": "EscrowFactory",
-    "address": "0xA66c479cb957f5eadA9f423a2057a488c09c66be",
+    "address": "0xB307BF710b564332508c7E1815286B78eFD952BF",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:45.308Z"
+    "lastUpdate": "2020-12-31T21:10:04.098Z"
   },
   "Specimen": {
     "name": "Specimen",
-    "address": "0x83AFc7797013fa18E74e8b87F7Ad8C4F1982Dbb9",
+    "address": "0x10b475f50Fb69a59B2b07D305D3D1c9450a49d6d",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:44.656Z"
+    "lastUpdate": "2020-12-31T21:10:03.357Z"
   },
   "DegenicsLog": {
     "name": "DegenicsLog",
-    "address": "0x2a91913112B0685436fae81D1ec5A8403af68849",
+    "address": "0x4c4617c0090a8a5A503465DbA02f4d84fd11d5B1",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:42.290Z"
+    "lastUpdate": "2020-12-31T21:10:00.625Z"
   },
   "Lab": {
     "name": "Lab",
-    "address": "0xD70Ed72a66B3131ebCb83e427a130bC7Ba6D685C",
+    "address": "0x488A7225Ae678bf4ce94C720928dfDDF601f292D",
     "updated": true,
-    "lastUpdate": "2020-12-30T13:58:42.715Z"
+    "lastUpdate": "2020-12-31T21:10:01.185Z"
   }
 }

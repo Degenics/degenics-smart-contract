@@ -32,14 +32,16 @@ contract Escrow {
     function forwardToSeller() public canExecute  {
         // require(tx.origin == seller, "Only seller");
         address payable _seller = address(uint160(seller));
-        _seller.transfer(address(this).balance);
+        // _seller.transfer(address(this).balance);
+        selfdestruct(_seller);
         status = "Forward";
     }
 
     function refundToBuyer()public canExecute{
         // require(tx.origin == seller, "Only seller");
         address payable _buyer = address(uint160(buyer));
-        _buyer.transfer(address(this).balance);
+        // _buyer.transfer(address(this).balance);
+        selfdestruct(_buyer);
         status = "Refund";
     }
 
