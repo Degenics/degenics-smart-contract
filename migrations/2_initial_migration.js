@@ -4,11 +4,12 @@ const Lab = artifacts.require("Lab");
 const DegenicsLog = artifacts.require("DegenicsLog");
 const Account = artifacts.require("Account");
 const Location = artifacts.require("Location");
+const SpecimenTracking = artifacts.require("SpecimenTracking");
 const Specimen = artifacts.require("Specimen");
 const EscrowFactory = artifacts.require("EscrowFactory");
 
 const jsonfile = require('jsonfile');
-const { nextTick } = require('process');
+// const { nextTick } = require('process');
 
 const filename = './build/contract.json';
 
@@ -24,6 +25,7 @@ const listArtifact = {
     Lab,
     Account, 
     Location, 
+    SpecimenTracking,
     Specimen,
     EscrowFactory,
     Degenics
@@ -55,13 +57,22 @@ module.exports = async function(deployer,network, accounts) {
             console.log('Deployed :',artifact.contractName)
             await deployer.deploy(artifact, 
                 contractInfo.EternalStorage.address, contractInfo.Account.address, 
-                contractInfo.Specimen.address, contractInfo.Location.address)
+                contractInfo.Specimen.address, contractInfo.SpecimenTracking.address, contractInfo.Location.address)
+            addContractInfo(artifact.contractName, artifact.address);
+            instances[artifact.contractName] = await artifact.deployed()
+        }else if(artifact.contractName =="SpecimenTracking"){
+            console.log('Deployed :',artifact.contractName)
+            await deployer.deploy(artifact, 
+                contractInfo.EternalStorage.address,
+                contractInfo.DegenicsLog.address)
             addContractInfo(artifact.contractName, artifact.address);
             instances[artifact.contractName] = await artifact.deployed()
         }else if(artifact.contractName =="Specimen"){
             console.log('Deployed :',artifact.contractName)
             await deployer.deploy(artifact, 
-                contractInfo.EternalStorage.address, contractInfo.DegenicsLog.address)
+                contractInfo.EternalStorage.address, 
+                contractInfo.DegenicsLog.address, 
+                contractInfo.SpecimenTracking.address)
             addContractInfo(artifact.contractName, artifact.address);
             instances[artifact.contractName] = await artifact.deployed()
         } else if(artifact.abi[0].inputs.length == 0){
@@ -121,11 +132,14 @@ module.exports = async function(deployer,network, accounts) {
             console.log(await instances.Degenics.serviceByIndex(accounts[1], 3))
 
             await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', {from: accounts[8]})
+            console.log( await instances.Degenics.getLastNumber({from: accounts[8]}))
             await instances.Degenics.registerSpecimen(accounts[1],'TEST-1', {from: accounts[9]})
+            console.log( await instances.Degenics.getLastNumber({from: accounts[9]}))
             await instances.Degenics.registerSpecimen(accounts[1],'TEST-2', {from: accounts[7]})
+            console.log( await instances.Degenics.getLastNumber({from: accounts[7]}))
 
-            let number = await instances.Degenics.getLastNumber({from: accounts[5]})
-            console.log(number)
+            let number = await instances.Degenics.getLastNumber({from: accounts[8]})
+            console.log('number', number)
             console.log(await instances.Degenics.specimenByNumber(number))
             let excrow = await instances.Degenics.getEscrow(number); 
             console.log(excrow)
@@ -133,8 +147,24 @@ module.exports = async function(deployer,network, accounts) {
             console.log(await instances.Degenics.specimenCount({from: accounts[1]}))
             console.log(await instances.Degenics.specimenByIndex(1, {from: accounts[1]}))
 
+            console.log('send----------------------------------------------------------------')
+            await instances.Degenics.sendSpecimen(number, "send test", {from: accounts[8]})
+            console.log(await instances.Degenics.specimenByNumber(number))
+            console.log('receive----------------------------------------------------------------')
+            await instances.Degenics.receiveSpecimen(number, "receive test", {from: accounts[1]})
+            console.log(await instances.Degenics.specimenByNumber(number))
+            console.log('succes----------------------------------------------------------------')
+            await instances.Degenics.analysisSucces(number, "succes test", "test.txt", {from: accounts[1]})
+            console.log(await instances.Degenics.specimenByNumber(number))
+            console.log('----------------------------------------------------------------')
+
+
+            // console.log('toBase32', await instances.Degenics.toBase32('0x2a2225a909b75597391aa279682427d26f247fc67d0b2d1afac919988ba8f5eb', {from: accounts[1]}))
+            
+            // console.log('toBase32', await instances.Degenics.toBase32('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', {from: accounts[1]}))
+
         } catch (error) {
-            console.log(error)
+            console.log('error', error)
         }
     }
 

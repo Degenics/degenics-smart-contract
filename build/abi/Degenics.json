@@ -18,6 +18,11 @@
       },
       {
         "internalType": "address",
+        "name": "_specimenTracking",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
         "name": "_location",
         "type": "address"
       }
@@ -353,9 +358,9 @@
     "name": "getLastNumber",
     "outputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "",
-        "type": "bytes32"
+        "type": "string"
       }
     ],
     "payable": false,
@@ -383,9 +388,9 @@
     "constant": true,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       }
     ],
     "name": "specimenByNumber",
@@ -414,7 +419,7 @@
     "payable": false,
     "stateMutability": "view",
     "type": "function",
-    "signature": "0xb1bc38f0"
+    "signature": "0x103ed5b3"
   },
   {
     "constant": true,
@@ -457,9 +462,9 @@
     "constant": true,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       }
     ],
     "name": "getEscrow",
@@ -473,15 +478,15 @@
     "payable": false,
     "stateMutability": "view",
     "type": "function",
-    "signature": "0xf023b811"
+    "signature": "0x969631d5"
   },
   {
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       },
       {
         "internalType": "string",
@@ -494,15 +499,15 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0xd06a9cb7"
+    "signature": "0x9cd8f256"
   },
   {
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       },
       {
         "internalType": "string",
@@ -515,15 +520,15 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0x54c7763a"
+    "signature": "0xed3468f7"
   },
   {
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       },
       {
         "internalType": "string",
@@ -536,15 +541,15 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0x42438523"
+    "signature": "0xdddae884"
   },
   {
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       },
       {
         "internalType": "string",
@@ -562,15 +567,15 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0xe77ebf46"
+    "signature": "0xca15e24a"
   },
   {
     "constant": true,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       }
     ],
     "name": "getFile",
@@ -584,15 +589,15 @@
     "payable": false,
     "stateMutability": "view",
     "type": "function",
-    "signature": "0x473aa2a5"
+    "signature": "0xe0876aa8"
   },
   {
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       },
       {
         "internalType": "string",
@@ -605,7 +610,7 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0x1e7dcb18"
+    "signature": "0xaa088937"
   },
   {
     "constant": false,

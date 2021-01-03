@@ -10,6 +10,11 @@
         "internalType": "address",
         "name": "_degenicsLog",
         "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_specimenTracking",
+        "type": "address"
       }
     ],
     "payable": false,
@@ -55,9 +60,9 @@
     "name": "registerSpecimen",
     "outputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "",
-        "type": "bytes32"
+        "type": "string"
       }
     ],
     "payable": false,
@@ -91,9 +96,9 @@
     "constant": true,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       }
     ],
     "name": "specimenByNumber",
@@ -122,7 +127,7 @@
     "payable": false,
     "stateMutability": "view",
     "type": "function",
-    "signature": "0xb1bc38f0"
+    "signature": "0x103ed5b3"
   },
   {
     "constant": true,
@@ -165,179 +170,5 @@
     "stateMutability": "view",
     "type": "function",
     "signature": "0x4fcbb723"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "number",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "string",
-        "name": "remark",
-        "type": "string"
-      }
-    ],
-    "name": "sendSpecimen",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0xd06a9cb7"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "number",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "string",
-        "name": "remark",
-        "type": "string"
-      }
-    ],
-    "name": "receiveSpecimen",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0x54c7763a"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "number",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "string",
-        "name": "remark",
-        "type": "string"
-      }
-    ],
-    "name": "rejectSpecimen",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0x42438523"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "number",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "string",
-        "name": "file",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "remark",
-        "type": "string"
-      }
-    ],
-    "name": "analysisSucces",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0xe77ebf46"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "number",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "string",
-        "name": "remark",
-        "type": "string"
-      }
-    ],
-    "name": "analysisFail",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0x1e7dcb18"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "number",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_index",
-        "type": "uint256"
-      }
-    ],
-    "name": "logByIndex",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "time",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "logType",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "log",
-        "type": "string"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0x2b6db611"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "number",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getFile",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "file",
-        "type": "string"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x473aa2a5"
   }
 ]

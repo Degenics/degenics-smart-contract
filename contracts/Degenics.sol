@@ -6,6 +6,7 @@ import "./common/SafeMath.sol";
 import "./common/Address.sol";
 
 import "./Account.sol";
+import "./SpecimenTracking.sol";
 import "./Specimen.sol";
 import "./Location.sol";
 import "./EscrowFactory.sol";
@@ -17,6 +18,9 @@ contract Degenics is Base {
     Location location;
     Account account;
     Specimen specimen;
+    SpecimenTracking specimenTracking;
+
+    mapping(address => string)  private lastNumber;
 
 
     event NewLab(address account, string name, string country, string city);
@@ -24,10 +28,11 @@ contract Degenics is Base {
     event NewSpecimen(address labAccount, string Code);
 
     
-    constructor(address _storage, address _account, address _specimen, address _location ) public Base(_storage) {
+    constructor(address _storage, address _account, address _specimen, address _specimenTracking, address _location ) public Base(_storage) {
         location = Location(_location);
         account = Account(_account);
         specimen = Specimen(_specimen);
+        specimenTracking = SpecimenTracking(_specimenTracking);
     }
 
     
@@ -65,63 +70,64 @@ contract Degenics is Base {
 
     function registerSpecimen(address labAccount, string memory serviceCode) public {
         
-        bytes32 number = specimen.registerSpecimen(msg.sender, labAccount, serviceCode);
+        string memory number = specimen.registerSpecimen(msg.sender, labAccount, serviceCode);
         address escrow = createEscrow(msg.sender, labAccount, eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", labAccount, serviceCode))));
 
         eternalStorage.setAddress(keccak256(abi.encodePacked("Specimen.escrow", number)),  escrow); 
+        lastNumber[msg.sender]  = number;
         emit NewSpecimen(labAccount, serviceCode);
     }
 
-    function getLastNumber() public view returns(bytes32){
-        return eternalStorage.getBytes32(keccak256(abi.encodePacked("Specimen.lastNumber",msg.sender)));
+    function getLastNumber() public view returns(string memory){
+        return lastNumber[msg.sender];
     }
 
     function specimenCount() public view returns(uint){
         return specimen.specimenCount(msg.sender);
     }
 
-    function specimenByNumber(bytes32 number) public view returns(
+    function specimenByNumber(string memory number) public view returns(
         address owner, address labAccount, string memory serviceCode, string memory status){  
         return specimen.specimenByNumber(number) ;
     }
 
     function specimenByIndex(uint index) public view returns(
         address owner, address labAccount, string memory serviceCode, string memory status){        
-        bytes32 number =  eternalStorage.getBytes32(keccak256(abi.encodePacked("Specimen",msg.sender, index )));   
+        string memory number =  eternalStorage.getString(keccak256(abi.encodePacked("Specimen",msg.sender, index )));   
         return specimenByNumber(number);
     }
 
-    function getEscrow(bytes32  number) public view returns(address){
+    function getEscrow(string memory number) public view returns(address){
         return eternalStorage.getAddress(keccak256(abi.encodePacked("Specimen.escrow", number))); 
     }
 
-    function sendSpecimen(bytes32  number, string memory remark) public {        
-        specimen.sendSpecimen(number, remark);
+    function sendSpecimen(string memory number, string memory remark) public {        
+        specimenTracking.sendSpecimen(number, remark);
     }
 
-    function receiveSpecimen(bytes32  number, string memory remark) public {
-        specimen.receiveSpecimen(number, remark);
+    function receiveSpecimen(string memory number, string memory remark) public {
+        specimenTracking.receiveSpecimen(number, remark);
     }
 
-    function rejectSpecimen(bytes32  number, string memory remark) public {
-        specimen.rejectSpecimen(number, remark);
+    function rejectSpecimen(string memory number, string memory remark) public {
+        specimenTracking.rejectSpecimen(number, remark);
     }
 
-    function analysisSucces(bytes32  number, string memory file, string memory remark) public {
-        specimen.analysisSucces(number, file, remark);
+    function analysisSucces(string memory number, string memory file, string memory remark) public {
+        specimenTracking.analysisSucces(number, file, remark);
         getEscrowInstance(number).forwardToSeller();
     }
 
-    function getFile(bytes32 number) public view returns(string memory file){
-        specimen.getFile(number);
+    function getFile(string memory number) public view returns(string memory file){
+        specimenTracking.getFile(number);
     }
 
-    function analysisFail(bytes32  number, string memory remark) public {
-        specimen.analysisFail(number, remark);
+    function analysisFail(string memory number, string memory remark) public {
+        specimenTracking.analysisFail(number, remark);
         getEscrowInstance(number).refundToBuyer();
     }
 
-    function escrowBalance(bytes32 number) internal view returns(uint){
+    function escrowBalance(string memory number) internal view returns(uint){
         address escrow = eternalStorage.getAddress(keccak256(abi.encodePacked("Specimen.escrow", number)));
         return escrow.balance;
     }
@@ -142,7 +148,7 @@ contract Degenics is Base {
         emit NewService(labAccount, name, service);
     }
 
-    function getEscrowInstance(bytes32 number) internal returns(Escrow){
+    function getEscrowInstance(string memory number) internal returns(Escrow){
         address payable escrowWallet = address(uint160(getEscrow(number)));
         Escrow instance = Escrow(escrowWallet);
         return instance;
@@ -152,6 +158,8 @@ contract Degenics is Base {
         Lab lab = Lab(eternalStorage.getAddress(keccak256(abi.encodePacked("contract.address", "Lab"))));
         return lab;
     }
+
+    
 
 
 }

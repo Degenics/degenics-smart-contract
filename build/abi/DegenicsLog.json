@@ -32,9 +32,9 @@
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       },
       {
         "internalType": "string",
@@ -52,15 +52,15 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0x72b01cc0"
+    "signature": "0xf609cabd"
   },
   {
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       }
     ],
     "name": "countSpecimenLog",
@@ -74,15 +74,15 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0x62dd76bf"
+    "signature": "0x3c0b6733"
   },
   {
     "constant": false,
     "inputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "string",
         "name": "number",
-        "type": "bytes32"
+        "type": "string"
       },
       {
         "internalType": "uint256",
@@ -116,6 +116,6 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0x1080c148"
+    "signature": "0x0e2eb2a1"
   }
 ]

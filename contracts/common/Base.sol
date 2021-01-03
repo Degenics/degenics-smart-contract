@@ -100,4 +100,5 @@ contract Base {
             return keccak256(abi.encodePacked(_string1)) == keccak256(abi.encodePacked(_string2));
         }
     }
+    
 }
