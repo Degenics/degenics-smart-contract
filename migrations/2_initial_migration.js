@@ -102,7 +102,7 @@ module.exports = async function(deployer,network, accounts) {
         try {
             
             const labList = await jsonfile.readFileSync('./migrations/listLab.json')
-            // console.log(labList)
+            console.log(labList)
 
             let i = 1;
             for(let lab of labList){
@@ -155,10 +155,6 @@ module.exports = async function(deployer,network, accounts) {
             // console.log(await instances.Location.countryByIndex(1))
             // console.log(await instances.Location.cityByIndex("Indenesia", 1))
 
-            // await instances.Lab.updateData("url", "url lab1", {from: accounts[1]})
-            // await instances.Lab.updateData("logo", "logo lab1", {from: accounts[1]})
-            // await instances.Lab.updateData("address", "Jl. Sukoarno Hatta no.1", {from: accounts[1]})
-
             // console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',1))
             // console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',2))
             // await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100,  {from:accounts[1]});
@@ -198,9 +194,27 @@ module.exports = async function(deployer,network, accounts) {
             // await instances.Degenics.receiveSpecimen(number, "receive test", {from: accounts[1]})
             // console.log(await instances.Degenics.specimenByNumber(number))
             // console.log('succes----------------------------------------------------------------')
-            // await instances.Degenics.analysisSucces(number, "succes test", "test.txt", {from: accounts[1]})
+            // await instances.Degenics.analysisSucces(number, "test.txt", "succes test", {from: accounts[1]})
             // console.log(await instances.Degenics.specimenByNumber(number))
+            // console.log('file',await instances.Degenics.getFile(number, {from: accounts[8]}))
             // console.log('----------------------------------------------------------------')
+
+            // let labCountSpecimen = await instances.Degenics.specimenCount({from:accounts[1]})
+            // let custCountSpecimen = await instances.Degenics.specimenCount({from:accounts[8]})
+
+            // console.log('labCountSpecimen:',labCountSpecimen, '\n','custCountSpecimen:', custCountSpecimen) 
+            
+            // for(let i =1; i <=labCountSpecimen; i++ ){
+            //     console.log(await instances.Degenics.specimenByIndex(i, {from:accounts[1]}))
+            // }
+
+            // for(let i =1; i <=custCountSpecimen; i++ ){
+            //     console.log(await instances.Degenics.specimenByIndex(i, {from:accounts[8]}))
+            // }
+
+            // console.log()
+
+
 
 
             // console.log('toBase32', await instances.Degenics.toBase32('0x2a2225a909b75597391aa279682427d26f247fc67d0b2d1afac919988ba8f5eb', {from: accounts[1]}))

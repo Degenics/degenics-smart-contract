@@ -46,7 +46,7 @@ contract Specimen is Base {
         eternalStorage.setString(keccak256(abi.encodePacked("Specimen",ownerSpecimen, 
             eternalStorage.addUint(keccak256(abi.encodePacked("Specimen.count", ownerSpecimen)), 1))), number);
         eternalStorage.setString(keccak256(abi.encodePacked("Specimen",labAccount, 
-            eternalStorage.addUint(keccak256(abi.encodePacked("Specimen.count",labAccount)), 1) )), number);
+            eternalStorage.addUint(keccak256(abi.encodePacked("Specimen.count",labAccount)), 1))), number);
         
         degenicsLog.addSpecimenLog(number, "created", "-");
         return number;  
@@ -56,23 +56,23 @@ contract Specimen is Base {
         return eternalStorage.getUint(keccak256(abi.encodePacked("Specimen.count",sender)));
     }
 
-    function specimenByNumber(string memory number) public view onlyDegenicsContract returns(
-        address owner, address labAccount, string memory serviceCode, string memory status){      
-        status =specimenTracking.getStatus(number); 
-        if(specimenTracking.checkStatus(number, "New") && specimenTracking.checkPayment(number)){
-            // escrowBalance(number) >=  eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", labAccount, serviceCode))) ){
+    function specimenByNumber(string memory _number) public view onlyDegenicsContract returns(
+        string memory number, address owner, address labAccount, string memory serviceCode, string memory status){      
+        status =specimenTracking.getStatus(_number); 
+        if(specimenTracking.checkStatus(_number, "New") && specimenTracking.checkPayment(_number)){
             status = "Paid";
         }
         return(
-            eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.owner",number ))),
-            eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))),
-            eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.serviceCode",number ))),
+            _number,
+            eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.owner",_number ))),
+            eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",_number ))),
+            eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.serviceCode",_number ))),
             status
         );
     }
 
     function specimenByIndex(address sender, uint index) public view onlyDegenicsContract returns(
-        address owner, address labAccount, string memory serviceCode, string memory status){        
+         string memory number, address owner, address labAccount, string memory serviceCode, string memory status){        
         
         return specimenByNumber( eternalStorage.getString(keccak256(abi.encodePacked("Specimen",sender, index ))));
     }

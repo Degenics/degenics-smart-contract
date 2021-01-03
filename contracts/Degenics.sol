@@ -86,13 +86,13 @@ contract Degenics is Base {
         return specimen.specimenCount(msg.sender);
     }
 
-    function specimenByNumber(string memory number) public view returns(
-        address owner, address labAccount, string memory serviceCode, string memory status){  
-        return specimen.specimenByNumber(number) ;
+    function specimenByNumber(string memory _number) public view returns(
+        string memory number, address owner, address labAccount, string memory serviceCode, string memory status){  
+        return specimen.specimenByNumber(_number) ;
     }
 
     function specimenByIndex(uint index) public view returns(
-        address owner, address labAccount, string memory serviceCode, string memory status){        
+        string memory number,address owner, address labAccount, string memory serviceCode, string memory status){        
         string memory number =  eternalStorage.getString(keccak256(abi.encodePacked("Specimen",msg.sender, index )));   
         return specimenByNumber(number);
     }
@@ -119,7 +119,7 @@ contract Degenics is Base {
     }
 
     function getFile(string memory number) public view returns(string memory file){
-        specimenTracking.getFile(number);
+        return specimenTracking.getFile(number);
     }
 
     function analysisFail(string memory number, string memory remark) public {

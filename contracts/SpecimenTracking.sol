@@ -90,11 +90,14 @@ contract SpecimenTracking is Base {
         return compareString(getStatus(number), status);
     }
 
-    function getFile(string memory number) public view onlyAllowContract onlySpecimenOwner(number)  returns(string memory file){
-        return eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.file",number)));
+    function getFile(string memory number) public view onlyAllowContract  returns(string memory file){
+        require(eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))) == tx.origin || 
+    eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.owner",number ))) == tx.origin, "Only owner and lab");  
+        return eternalStorage.getString(keccak256(abi.encodePacked("Specimen.file",number)));
     }
     
     function checkPayment(string memory number) public view onlyAllowContract returns(bool){
         return escrowBalance(number) >=  checkPrice(number);
+        // return true;
     }
 }

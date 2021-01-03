@@ -97,12 +97,17 @@
     "inputs": [
       {
         "internalType": "string",
-        "name": "number",
+        "name": "_number",
         "type": "string"
       }
     ],
     "name": "specimenByNumber",
     "outputs": [
+      {
+        "internalType": "string",
+        "name": "number",
+        "type": "string"
+      },
       {
         "internalType": "address",
         "name": "owner",
@@ -145,6 +150,11 @@
     ],
     "name": "specimenByIndex",
     "outputs": [
+      {
+        "internalType": "string",
+        "name": "number",
+        "type": "string"
+      },
       {
         "internalType": "address",
         "name": "owner",
