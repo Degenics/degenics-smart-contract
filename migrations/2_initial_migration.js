@@ -131,13 +131,17 @@ module.exports = async function(deployer,network, accounts) {
                     let countLab = await instances.Degenics.labCount(country, city)
                     for(let k = 1; k <= countLab; k++){
                         let lab = await instances.Degenics.labByIndex(country, city, k)
-                        console.log(lab.name)
-                        // for(let r  )
+                        console.log('---------',lab.name)
+                        let countService = await instances.Degenics.serviceCount(lab.labAccount)
+                        for(let r = 1; r <= countService; r++){
+                            let service =  await instances.Degenics.serviceByIndex(lab.labAccount, r)
+                            console.log('-----------------', service.code, '-', service.serviceName)
+                        }
                     }
                 }
             }
 
-            console.log(countCountry)
+            // console.log(countCountry)
 
 
             // await instances.Lab.register(accounts[1], 'Lab 1', 'Indenesia', 'Jakarta');
