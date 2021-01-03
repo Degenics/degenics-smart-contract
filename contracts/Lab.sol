@@ -50,10 +50,6 @@ contract Lab is Base {
         degenics.emitNewLab(_account, name, country, city);
     }
 
-    function updateData(string memory field, string memory data) public onlyLab{
-        eternalStorage.setString(keccak256(abi.encodePacked("lab.", field, msg.sender)), data);
-    }
-
     function activeLab(bool active) public onlyLab{
         eternalStorage.setBool(keccak256(abi.encodePacked("lab.active", msg.sender)), active);
     }

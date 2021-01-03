@@ -150,7 +150,7 @@
         "id": 824,
         "nodeType": "ImportDirective",
         "scope": 1067,
-        "sourceUnit": 3602,
+        "sourceUnit": 3568,
         "src": "30:27:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -164,10 +164,10 @@
               "id": 825,
               "name": "Base",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3601,
+              "referencedDeclaration": 3567,
               "src": "85:4:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Base_$3601",
+                "typeIdentifier": "t_contract$_Base_$3567",
                 "typeString": "contract Base"
               }
             },
@@ -177,7 +177,7 @@
           }
         ],
         "contractDependencies": [
-          3601
+          3567
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -185,7 +185,7 @@
         "id": 1066,
         "linearizedBaseContracts": [
           1066,
-          3601
+          3567
         ],
         "name": "DegenicsLog",
         "nodeType": "ContractDefinition",
@@ -274,7 +274,7 @@
                                       "name": "abi",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 4770,
+                                      "referencedDeclaration": 4736,
                                       "src": "186:3:2",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_magic_abi",
@@ -321,7 +321,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4777,
+                                "referencedDeclaration": 4743,
                                 "src": "176:9:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -356,10 +356,10 @@
                               "name": "eternalStorage",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3413,
+                              "referencedDeclaration": 3379,
                               "src": "150:14:2",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                 "typeString": "contract EternalStorageInterface"
                               }
                             },
@@ -370,7 +370,7 @@
                             "lValueRequested": false,
                             "memberName": "getAddress",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4600,
+                            "referencedDeclaration": 4566,
                             "src": "150:25:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -401,7 +401,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4783,
+                            "referencedDeclaration": 4749,
                             "src": "240:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -462,10 +462,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4786,
-                        4787
+                        4752,
+                        4753
                       ],
-                      "referencedDeclaration": 4787,
+                      "referencedDeclaration": 4753,
                       "src": "142:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -616,7 +616,7 @@
                                           "name": "abi",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 4770,
+                                          "referencedDeclaration": 4736,
                                           "src": "403:3:2",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_abi",
@@ -663,7 +663,7 @@
                                     "name": "keccak256",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 4777,
+                                    "referencedDeclaration": 4743,
                                     "src": "393:9:2",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -698,10 +698,10 @@
                                   "name": "eternalStorage",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3413,
+                                  "referencedDeclaration": 3379,
                                   "src": "367:14:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                     "typeString": "contract EternalStorageInterface"
                                   }
                                 },
@@ -712,7 +712,7 @@
                                 "lValueRequested": false,
                                 "memberName": "getAddress",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 4600,
+                                "referencedDeclaration": 4566,
                                 "src": "367:25:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -743,7 +743,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4783,
+                                "referencedDeclaration": 4749,
                                 "src": "457:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -846,7 +846,7 @@
                                           "name": "abi",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 4770,
+                                          "referencedDeclaration": 4736,
                                           "src": "516:3:2",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_abi",
@@ -893,7 +893,7 @@
                                     "name": "keccak256",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 4777,
+                                    "referencedDeclaration": 4743,
                                     "src": "506:9:2",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -928,10 +928,10 @@
                                   "name": "eternalStorage",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3413,
+                                  "referencedDeclaration": 3379,
                                   "src": "480:14:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                     "typeString": "contract EternalStorageInterface"
                                   }
                                 },
@@ -942,7 +942,7 @@
                                 "lValueRequested": false,
                                 "memberName": "getAddress",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 4600,
+                                "referencedDeclaration": 4566,
                                 "src": "480:25:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -973,7 +973,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4783,
+                                "referencedDeclaration": 4749,
                                 "src": "570:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1082,7 +1082,7 @@
                                         "name": "abi",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 4770,
+                                        "referencedDeclaration": 4736,
                                         "src": "629:3:2",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_magic_abi",
@@ -1129,7 +1129,7 @@
                                   "name": "keccak256",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4777,
+                                  "referencedDeclaration": 4743,
                                   "src": "619:9:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1164,10 +1164,10 @@
                                 "name": "eternalStorage",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3413,
+                                "referencedDeclaration": 3379,
                                 "src": "593:14:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                  "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                   "typeString": "contract EternalStorageInterface"
                                 }
                               },
@@ -1178,7 +1178,7 @@
                               "lValueRequested": false,
                               "memberName": "getAddress",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 4600,
+                              "referencedDeclaration": 4566,
                               "src": "593:25:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -1209,7 +1209,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4783,
+                              "referencedDeclaration": 4749,
                               "src": "691:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1276,10 +1276,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4786,
-                        4787
+                        4752,
+                        4753
                       ],
-                      "referencedDeclaration": 4787,
+                      "referencedDeclaration": 4753,
                       "src": "359:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1359,10 +1359,10 @@
                   "name": "Base",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3601,
+                  "referencedDeclaration": 3567,
                   "src": "796:4:2",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_Base_$3601_$",
+                    "typeIdentifier": "t_type$_t_contract$_Base_$3567_$",
                     "typeString": "type(contract Base)"
                   }
                 },
@@ -1515,7 +1515,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1007:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -1562,7 +1562,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "997:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1619,10 +1619,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "974:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -1633,7 +1633,7 @@
                       "lValueRequested": false,
                       "memberName": "addUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4758,
+                      "referencedDeclaration": 4724,
                       "src": "974:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$_t_uint256_$",
@@ -1733,7 +1733,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1103:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -1780,7 +1780,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1093:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1832,10 +1832,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1068:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -1846,7 +1846,7 @@
                       "lValueRequested": false,
                       "memberName": "setString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4672,
+                      "referencedDeclaration": 4638,
                       "src": "1068:24:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
@@ -1947,7 +1947,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1213:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -1994,7 +1994,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1203:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -2046,10 +2046,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1178:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -2060,7 +2060,7 @@
                       "lValueRequested": false,
                       "memberName": "setString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4672,
+                      "referencedDeclaration": 4638,
                       "src": "1178:24:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
@@ -2161,7 +2161,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1312:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -2208,7 +2208,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1302:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -2237,7 +2237,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4773,
+                          "referencedDeclaration": 4739,
                           "src": "1368:5:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -2276,10 +2276,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1279:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -2290,7 +2290,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4665,
+                      "referencedDeclaration": 4631,
                       "src": "1279:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -2506,7 +2506,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1537:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -2553,7 +2553,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1527:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -2588,10 +2588,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1504:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -2602,7 +2602,7 @@
                       "lValueRequested": false,
                       "memberName": "getUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4607,
+                      "referencedDeclaration": 4573,
                       "src": "1504:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -2879,7 +2879,7 @@
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4770,
+                                  "referencedDeclaration": 4736,
                                   "src": "1862:3:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
@@ -2926,7 +2926,7 @@
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4777,
+                            "referencedDeclaration": 4743,
                             "src": "1852:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -2961,10 +2961,10 @@
                           "name": "eternalStorage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3413,
+                          "referencedDeclaration": 3379,
                           "src": "1827:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                             "typeString": "contract EternalStorageInterface"
                           }
                         },
@@ -2975,7 +2975,7 @@
                         "lValueRequested": false,
                         "memberName": "getString",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 4614,
+                        "referencedDeclaration": 4580,
                         "src": "1827:24:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -3104,7 +3104,7 @@
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4770,
+                                  "referencedDeclaration": 4736,
                                   "src": "1969:3:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
@@ -3151,7 +3151,7 @@
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4777,
+                            "referencedDeclaration": 4743,
                             "src": "1959:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -3186,10 +3186,10 @@
                           "name": "eternalStorage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3413,
+                          "referencedDeclaration": 3379,
                           "src": "1934:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                             "typeString": "contract EternalStorageInterface"
                           }
                         },
@@ -3200,7 +3200,7 @@
                         "lValueRequested": false,
                         "memberName": "getString",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 4614,
+                        "referencedDeclaration": 4580,
                         "src": "1934:24:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -3329,7 +3329,7 @@
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4770,
+                                  "referencedDeclaration": 4736,
                                   "src": "2070:3:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
@@ -3376,7 +3376,7 @@
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4777,
+                            "referencedDeclaration": 4743,
                             "src": "2060:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -3411,10 +3411,10 @@
                           "name": "eternalStorage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3413,
+                          "referencedDeclaration": 3379,
                           "src": "2037:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                             "typeString": "contract EternalStorageInterface"
                           }
                         },
@@ -3425,7 +3425,7 @@
                         "lValueRequested": false,
                         "memberName": "getUint",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 4607,
+                        "referencedDeclaration": 4573,
                         "src": "2037:22:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -3770,7 +3770,7 @@
         "id": 824,
         "nodeType": "ImportDirective",
         "scope": 1067,
-        "sourceUnit": 3602,
+        "sourceUnit": 3568,
         "src": "30:27:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3784,10 +3784,10 @@
               "id": 825,
               "name": "Base",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3601,
+              "referencedDeclaration": 3567,
               "src": "85:4:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Base_$3601",
+                "typeIdentifier": "t_contract$_Base_$3567",
                 "typeString": "contract Base"
               }
             },
@@ -3797,7 +3797,7 @@
           }
         ],
         "contractDependencies": [
-          3601
+          3567
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -3805,7 +3805,7 @@
         "id": 1066,
         "linearizedBaseContracts": [
           1066,
-          3601
+          3567
         ],
         "name": "DegenicsLog",
         "nodeType": "ContractDefinition",
@@ -3894,7 +3894,7 @@
                                       "name": "abi",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 4770,
+                                      "referencedDeclaration": 4736,
                                       "src": "186:3:2",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_magic_abi",
@@ -3941,7 +3941,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4777,
+                                "referencedDeclaration": 4743,
                                 "src": "176:9:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -3976,10 +3976,10 @@
                               "name": "eternalStorage",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3413,
+                              "referencedDeclaration": 3379,
                               "src": "150:14:2",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                 "typeString": "contract EternalStorageInterface"
                               }
                             },
@@ -3990,7 +3990,7 @@
                             "lValueRequested": false,
                             "memberName": "getAddress",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4600,
+                            "referencedDeclaration": 4566,
                             "src": "150:25:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -4021,7 +4021,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4783,
+                            "referencedDeclaration": 4749,
                             "src": "240:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -4082,10 +4082,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4786,
-                        4787
+                        4752,
+                        4753
                       ],
-                      "referencedDeclaration": 4787,
+                      "referencedDeclaration": 4753,
                       "src": "142:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4236,7 +4236,7 @@
                                           "name": "abi",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 4770,
+                                          "referencedDeclaration": 4736,
                                           "src": "403:3:2",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_abi",
@@ -4283,7 +4283,7 @@
                                     "name": "keccak256",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 4777,
+                                    "referencedDeclaration": 4743,
                                     "src": "393:9:2",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4318,10 +4318,10 @@
                                   "name": "eternalStorage",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3413,
+                                  "referencedDeclaration": 3379,
                                   "src": "367:14:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                     "typeString": "contract EternalStorageInterface"
                                   }
                                 },
@@ -4332,7 +4332,7 @@
                                 "lValueRequested": false,
                                 "memberName": "getAddress",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 4600,
+                                "referencedDeclaration": 4566,
                                 "src": "367:25:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -4363,7 +4363,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4783,
+                                "referencedDeclaration": 4749,
                                 "src": "457:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -4466,7 +4466,7 @@
                                           "name": "abi",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 4770,
+                                          "referencedDeclaration": 4736,
                                           "src": "516:3:2",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_abi",
@@ -4513,7 +4513,7 @@
                                     "name": "keccak256",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 4777,
+                                    "referencedDeclaration": 4743,
                                     "src": "506:9:2",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4548,10 +4548,10 @@
                                   "name": "eternalStorage",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3413,
+                                  "referencedDeclaration": 3379,
                                   "src": "480:14:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                    "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                     "typeString": "contract EternalStorageInterface"
                                   }
                                 },
@@ -4562,7 +4562,7 @@
                                 "lValueRequested": false,
                                 "memberName": "getAddress",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 4600,
+                                "referencedDeclaration": 4566,
                                 "src": "480:25:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -4593,7 +4593,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4783,
+                                "referencedDeclaration": 4749,
                                 "src": "570:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -4702,7 +4702,7 @@
                                         "name": "abi",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 4770,
+                                        "referencedDeclaration": 4736,
                                         "src": "629:3:2",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_magic_abi",
@@ -4749,7 +4749,7 @@
                                   "name": "keccak256",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4777,
+                                  "referencedDeclaration": 4743,
                                   "src": "619:9:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4784,10 +4784,10 @@
                                 "name": "eternalStorage",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3413,
+                                "referencedDeclaration": 3379,
                                 "src": "593:14:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                                  "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                                   "typeString": "contract EternalStorageInterface"
                                 }
                               },
@@ -4798,7 +4798,7 @@
                               "lValueRequested": false,
                               "memberName": "getAddress",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 4600,
+                              "referencedDeclaration": 4566,
                               "src": "593:25:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -4829,7 +4829,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4783,
+                              "referencedDeclaration": 4749,
                               "src": "691:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -4896,10 +4896,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4786,
-                        4787
+                        4752,
+                        4753
                       ],
-                      "referencedDeclaration": 4787,
+                      "referencedDeclaration": 4753,
                       "src": "359:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4979,10 +4979,10 @@
                   "name": "Base",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3601,
+                  "referencedDeclaration": 3567,
                   "src": "796:4:2",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_Base_$3601_$",
+                    "typeIdentifier": "t_type$_t_contract$_Base_$3567_$",
                     "typeString": "type(contract Base)"
                   }
                 },
@@ -5135,7 +5135,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1007:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -5182,7 +5182,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "997:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5239,10 +5239,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "974:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -5253,7 +5253,7 @@
                       "lValueRequested": false,
                       "memberName": "addUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4758,
+                      "referencedDeclaration": 4724,
                       "src": "974:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$_t_uint256_$",
@@ -5353,7 +5353,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1103:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -5400,7 +5400,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1093:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5452,10 +5452,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1068:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -5466,7 +5466,7 @@
                       "lValueRequested": false,
                       "memberName": "setString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4672,
+                      "referencedDeclaration": 4638,
                       "src": "1068:24:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
@@ -5567,7 +5567,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1213:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -5614,7 +5614,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1203:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5666,10 +5666,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1178:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -5680,7 +5680,7 @@
                       "lValueRequested": false,
                       "memberName": "setString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4672,
+                      "referencedDeclaration": 4638,
                       "src": "1178:24:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
@@ -5781,7 +5781,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1312:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -5828,7 +5828,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1302:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5857,7 +5857,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4773,
+                          "referencedDeclaration": 4739,
                           "src": "1368:5:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -5896,10 +5896,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1279:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -5910,7 +5910,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4665,
+                      "referencedDeclaration": 4631,
                       "src": "1279:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -6126,7 +6126,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4770,
+                                "referencedDeclaration": 4736,
                                 "src": "1537:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -6173,7 +6173,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4777,
+                          "referencedDeclaration": 4743,
                           "src": "1527:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -6208,10 +6208,10 @@
                         "name": "eternalStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3413,
+                        "referencedDeclaration": 3379,
                         "src": "1504:14:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                          "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                           "typeString": "contract EternalStorageInterface"
                         }
                       },
@@ -6222,7 +6222,7 @@
                       "lValueRequested": false,
                       "memberName": "getUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4607,
+                      "referencedDeclaration": 4573,
                       "src": "1504:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -6499,7 +6499,7 @@
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4770,
+                                  "referencedDeclaration": 4736,
                                   "src": "1862:3:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
@@ -6546,7 +6546,7 @@
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4777,
+                            "referencedDeclaration": 4743,
                             "src": "1852:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -6581,10 +6581,10 @@
                           "name": "eternalStorage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3413,
+                          "referencedDeclaration": 3379,
                           "src": "1827:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                             "typeString": "contract EternalStorageInterface"
                           }
                         },
@@ -6595,7 +6595,7 @@
                         "lValueRequested": false,
                         "memberName": "getString",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 4614,
+                        "referencedDeclaration": 4580,
                         "src": "1827:24:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -6724,7 +6724,7 @@
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4770,
+                                  "referencedDeclaration": 4736,
                                   "src": "1969:3:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
@@ -6771,7 +6771,7 @@
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4777,
+                            "referencedDeclaration": 4743,
                             "src": "1959:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -6806,10 +6806,10 @@
                           "name": "eternalStorage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3413,
+                          "referencedDeclaration": 3379,
                           "src": "1934:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                             "typeString": "contract EternalStorageInterface"
                           }
                         },
@@ -6820,7 +6820,7 @@
                         "lValueRequested": false,
                         "memberName": "getString",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 4614,
+                        "referencedDeclaration": 4580,
                         "src": "1934:24:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -6949,7 +6949,7 @@
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 4770,
+                                  "referencedDeclaration": 4736,
                                   "src": "2070:3:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
@@ -6996,7 +6996,7 @@
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4777,
+                            "referencedDeclaration": 4743,
                             "src": "2060:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -7031,10 +7031,10 @@
                           "name": "eternalStorage",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3413,
+                          "referencedDeclaration": 3379,
                           "src": "2037:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4768",
+                            "typeIdentifier": "t_contract$_EternalStorageInterface_$4734",
                             "typeString": "contract EternalStorageInterface"
                           }
                         },
@@ -7045,7 +7045,7 @@
                         "lValueRequested": false,
                         "memberName": "getUint",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 4607,
+                        "referencedDeclaration": 4573,
                         "src": "2037:22:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -7377,12 +7377,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x1bA53fAc242715551E15e249454Fc7A0A9698917",
-      "transactionHash": "0xb2dcbf969e28fb9cc6c873c1dea3e4eb5f24e336618452e5e1ed856510a2d8b5"
+      "address": "0x3E498BddAfdC858C942339C9c1415bC55975B0CE",
+      "transactionHash": "0xaa9cc3a430b5ecaa52bb951a56d656439a2dd7d880b521ebc82cd15f1dc38552"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-01-03T07:42:05.114Z",
+  "updatedAt": "2021-01-03T11:30:06.432Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

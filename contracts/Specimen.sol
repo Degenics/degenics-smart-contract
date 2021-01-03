@@ -59,8 +59,8 @@ contract Specimen is Base {
     function specimenByNumber(string memory number) public view onlyDegenicsContract returns(
         address owner, address labAccount, string memory serviceCode, string memory status){      
         status =specimenTracking.getStatus(number); 
-        if(specimenTracking.checkStatus(number, "New") && 
-            escrowBalance(number) >=  eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", labAccount, serviceCode))) ){
+        if(specimenTracking.checkStatus(number, "New") && specimenTracking.checkPayment(number)){
+            // escrowBalance(number) >=  eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", labAccount, serviceCode))) ){
             status = "Paid";
         }
         return(
@@ -115,3 +115,5 @@ contract Specimen is Base {
 
 
 }
+
+//97J05EE1B531

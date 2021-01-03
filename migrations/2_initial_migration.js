@@ -100,72 +100,116 @@ module.exports = async function(deployer,network, accounts) {
 
     if(network == 'development'){
         try {
-            await instances.Lab.register(accounts[1], 'Lab 1', 'Indenesia', 'Jakarta');
-            await instances.Lab.register(accounts[2], 'Lab 2', 'Indenesia', 'Jakarta');
-            await instances.Lab.register(accounts[3], 'Lab 3', 'Indenesia', 'Surabaya');
-            await instances.Lab.register(accounts[4], 'Lab KL', 'Malaysia', 'Kuala Lumpur');
-            await instances.Lab.register(accounts[5], 'Lab KL 1', 'Malaysia', 'Kuala Lumpur');
-            let labCount = await instances.Degenics.labCount( 'Indenesia', 'Jakarta');
-            console.log(labCount)
-            console.log(await instances.Location.countCountry())
-            console.log(await instances.Location.countryByIndex(1))
-            console.log(await instances.Location.cityByIndex("Indenesia", 1))
+            
+            const labList = await jsonfile.readFileSync('./migrations/listLab.json')
+            // console.log(labList)
 
-            await instances.Lab.updateData("url", "url lab1", {from: accounts[1]})
-            await instances.Lab.updateData("logo", "logo lab1", {from: accounts[1]})
-            await instances.Lab.updateData("address", "Jl. Sukoarno Hatta no.1", {from: accounts[1]})
+            let i = 1;
+            for(let lab of labList){
+                console.log(lab.name)
+                await instances.Lab.register(accounts[i], lab.name, lab.country, lab.city); 
+                if(lab.additionalData != undefined) await instances.Lab.addAdditionalData(JSON.stringify(lab.additionalData), {from: accounts[i]})
+                if(lab.services){
+                    for(let service of lab.services){
+                        console.log(service)
+                        await instances.Lab.registerService(service.code, service.serviceName, service.description, service.price, {from:accounts[i]});
+                        if(service.additionalData) 
+                            await instances.Lab.addServiceAdditionalData(service.code, JSON.stringify(service.additionalData),{from:accounts[i]})
+                    }                    
+                }
+                i++                
+            }
 
-            console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',1))
-            console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',2))
-            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100,  {from:accounts[1]});
-            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 1', 'desciption 1', 100,  {from:accounts[1]});
-            await instances.Lab.registerService('TEST-3', 'Test title 3 lab 1', 'desciption 1', 100,  {from:accounts[1]});
+            let countCountry = parseInt(await instances.Location.countCountry())
+            for(let i = 1; i <= countCountry; i++){
+                let country = await instances.Location.countryByIndex(i)
+                console.log(country)
+                let countCity =await instances.Location.countCity(country)                
+                for(let j =1; j <= countCity; j++){
+                    let city = await instances.Location.cityByIndex(country, j)
+                    console.log('----',city)
+                    let countLab = await instances.Degenics.labCount(country, city)
+                    for(let k = 1; k <= countLab; k++){
+                        let lab = await instances.Degenics.labByIndex(country, city, k)
+                        console.log(lab.name)
+                        // for(let r  )
+                    }
+                }
+            }
 
-            await instances.Lab.registerService('TEST-1', 'Test title 1 lab 2', 'desciption 1', 100, {from:accounts[2]});
-            await instances.Lab.registerService('TEST-2', 'Test title 2 lab 3', 'desciption 1', 100, {from:accounts[2]});
+            console.log(countCountry)
 
-            console.log(await instances.Degenics.serviceCount(accounts[1]))
-            console.log(await instances.Degenics.serviceCount(accounts[2]))
 
-            console.log(await instances.Degenics.serviceByIndex(accounts[1], 1))
-            console.log(await instances.Degenics.serviceByIndex(accounts[1], 2))
-            console.log(await instances.Degenics.serviceByIndex(accounts[1], 3))
+            // await instances.Lab.register(accounts[1], 'Lab 1', 'Indenesia', 'Jakarta');
+            // await instances.Lab.register(accounts[2], 'Lab 2', 'Indenesia', 'Jakarta');
+            // await instances.Lab.register(accounts[3], 'Lab 3', 'Indenesia', 'Surabaya');
+            // await instances.Lab.register(accounts[4], 'Lab KL', 'Malaysia', 'Kuala Lumpur');
+            // await instances.Lab.register(accounts[5], 'Lab KL 1', 'Malaysia', 'Kuala Lumpur');
+            // let labCount = await instances.Degenics.labCount( 'Indenesia', 'Jakarta');
+            // console.log(labCount)
+            // console.log(await instances.Location.countCountry())
+            // console.log(await instances.Location.countryByIndex(1))
+            // console.log(await instances.Location.cityByIndex("Indenesia", 1))
 
-            await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', {from: accounts[8]})
-            console.log( await instances.Degenics.getLastNumber({from: accounts[8]}))
-            await instances.Degenics.registerSpecimen(accounts[1],'TEST-1', {from: accounts[9]})
-            console.log( await instances.Degenics.getLastNumber({from: accounts[9]}))
-            await instances.Degenics.registerSpecimen(accounts[1],'TEST-2', {from: accounts[7]})
-            console.log( await instances.Degenics.getLastNumber({from: accounts[7]}))
+            // await instances.Lab.updateData("url", "url lab1", {from: accounts[1]})
+            // await instances.Lab.updateData("logo", "logo lab1", {from: accounts[1]})
+            // await instances.Lab.updateData("address", "Jl. Sukoarno Hatta no.1", {from: accounts[1]})
 
-            let number = await instances.Degenics.getLastNumber({from: accounts[8]})
-            console.log('number', number)
-            console.log(await instances.Degenics.specimenByNumber(number))
-            let excrow = await instances.Degenics.getEscrow(number); 
-            console.log(excrow)
+            // console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',1))
+            // console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',2))
+            // await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100,  {from:accounts[1]});
+            // await instances.Lab.registerService('TEST-2', 'Test title 2 lab 1', 'desciption 1', 100,  {from:accounts[1]});
+            // await instances.Lab.registerService('TEST-3', 'Test title 3 lab 1', 'desciption 1', 100,  {from:accounts[1]});
 
-            console.log(await instances.Degenics.specimenCount({from: accounts[1]}))
-            console.log(await instances.Degenics.specimenByIndex(1, {from: accounts[1]}))
+            // await instances.Lab.registerService('TEST-1', 'Test title 1 lab 2', 'desciption 1', 100, {from:accounts[2]});
+            // await instances.Lab.registerService('TEST-2', 'Test title 2 lab 3', 'desciption 1', 100, {from:accounts[2]});
 
-            console.log('send----------------------------------------------------------------')
-            await instances.Degenics.sendSpecimen(number, "send test", {from: accounts[8]})
-            console.log(await instances.Degenics.specimenByNumber(number))
-            console.log('receive----------------------------------------------------------------')
-            await instances.Degenics.receiveSpecimen(number, "receive test", {from: accounts[1]})
-            console.log(await instances.Degenics.specimenByNumber(number))
-            console.log('succes----------------------------------------------------------------')
-            await instances.Degenics.analysisSucces(number, "succes test", "test.txt", {from: accounts[1]})
-            console.log(await instances.Degenics.specimenByNumber(number))
-            console.log('----------------------------------------------------------------')
+            // console.log(await instances.Degenics.serviceCount(accounts[1]))
+            // console.log(await instances.Degenics.serviceCount(accounts[2]))
+
+            // console.log(await instances.Degenics.serviceByIndex(accounts[1], 1))
+            // console.log(await instances.Degenics.serviceByIndex(accounts[1], 2))
+            // console.log(await instances.Degenics.serviceByIndex(accounts[1], 3))
+
+            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', {from: accounts[8]})
+            // console.log( await instances.Degenics.getLastNumber({from: accounts[8]}))
+            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-1', {from: accounts[9]})
+            // console.log( await instances.Degenics.getLastNumber({from: accounts[9]}))
+            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-2', {from: accounts[7]})
+            // console.log( await instances.Degenics.getLastNumber({from: accounts[7]}))
+
+            // let number = await instances.Degenics.getLastNumber({from: accounts[8]})
+            // console.log('number', number)
+            // console.log(await instances.Degenics.specimenByNumber(number))
+            // let excrow = await instances.Degenics.getEscrow(number); 
+            // console.log(excrow)
+
+            // console.log(await instances.Degenics.specimenCount({from: accounts[1]}))
+            // console.log(await instances.Degenics.specimenByIndex(1, {from: accounts[1]}))
+
+            // console.log('send----------------------------------------------------------------')
+            // await instances.Degenics.sendSpecimen(number, "send test", {from: accounts[8]})
+            // console.log(await instances.Degenics.specimenByNumber(number))
+            // console.log('receive----------------------------------------------------------------')
+            // await instances.Degenics.receiveSpecimen(number, "receive test", {from: accounts[1]})
+            // console.log(await instances.Degenics.specimenByNumber(number))
+            // console.log('succes----------------------------------------------------------------')
+            // await instances.Degenics.analysisSucces(number, "succes test", "test.txt", {from: accounts[1]})
+            // console.log(await instances.Degenics.specimenByNumber(number))
+            // console.log('----------------------------------------------------------------')
 
 
             // console.log('toBase32', await instances.Degenics.toBase32('0x2a2225a909b75597391aa279682427d26f247fc67d0b2d1afac919988ba8f5eb', {from: accounts[1]}))
             
             // console.log('toBase32', await instances.Degenics.toBase32('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', {from: accounts[1]}))
 
+            
+
         } catch (error) {
             console.log('error', error)
         }
+    } else if(network=='ropsten'){
+
     }
 
     for(let key in listArtifact){

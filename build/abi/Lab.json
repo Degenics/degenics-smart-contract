@@ -63,27 +63,6 @@
     "constant": false,
     "inputs": [
       {
-        "internalType": "string",
-        "name": "field",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "data",
-        "type": "string"
-      }
-    ],
-    "name": "updateData",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0xbddbb023"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
         "internalType": "bool",
         "name": "active",
         "type": "bool"

@@ -66,7 +66,7 @@ contract SpecimenTracking is Base {
         degenicsLog.addSpecimenLog(number, "fail", remark);
     }
 
-    function checkPrice(string memory number) internal returns(uint){
+    function checkPrice(string memory number) internal view returns(uint){
         return eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", 
             eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))), 
             eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.serviceCode",number )))
@@ -94,7 +94,7 @@ contract SpecimenTracking is Base {
         return eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.file",number)));
     }
     
-    function checkPayment(string memory number) internal returns(bool){
+    function checkPayment(string memory number) public view onlyAllowContract returns(bool){
         return escrowBalance(number) >=  checkPrice(number);
     }
 }
