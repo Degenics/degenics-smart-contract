@@ -57,7 +57,8 @@ contract Specimen is Base {
     }
 
     function specimenByNumber(string memory _number) public view onlyDegenicsContract returns(
-        string memory number, address owner, address labAccount, string memory serviceCode, string memory status){      
+        string memory number, address owner, address labAccount, string memory serviceCode, 
+        uint timestamp, string memory status){      
         status =specimenTracking.getStatus(_number); 
         if(specimenTracking.checkStatus(_number, "New") && specimenTracking.checkPayment(_number)){
             status = "Paid";
@@ -67,12 +68,14 @@ contract Specimen is Base {
             eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.owner",_number ))),
             eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",_number ))),
             eternalStorage.getString(keccak256(abi.encodePacked( "Specimen.serviceCode",_number ))),
+            eternalStorage.getUint(keccak256(abi.encodePacked( "Specimen.registered",_number ))),
             status
         );
     }
 
     function specimenByIndex(address sender, uint index) public view onlyDegenicsContract returns(
-         string memory number, address owner, address labAccount, string memory serviceCode, string memory status){        
+         string memory number, address owner, address labAccount, string memory serviceCode, 
+         uint timestamp, string memory status){        
         
         return specimenByNumber( eternalStorage.getString(keccak256(abi.encodePacked("Specimen",sender, index ))));
     }

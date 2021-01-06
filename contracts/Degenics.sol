@@ -87,12 +87,14 @@ contract Degenics is Base {
     }
 
     function specimenByNumber(string memory _number) public view returns(
-        string memory number, address owner, address labAccount, string memory serviceCode, string memory status){  
+        string memory number, address owner, address labAccount, string memory serviceCode, 
+        uint timestamp, string memory status){  
         return specimen.specimenByNumber(_number) ;
     }
 
     function specimenByIndex(uint index) public view returns(
-        string memory number,address owner, address labAccount, string memory serviceCode, string memory status){        
+        string memory number,address owner, address labAccount, string memory serviceCode, 
+        uint timestamp, string memory status){        
         string memory number =  eternalStorage.getString(keccak256(abi.encodePacked("Specimen",msg.sender, index )));   
         return specimenByNumber(number);
     }

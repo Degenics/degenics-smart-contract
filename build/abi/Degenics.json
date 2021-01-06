@@ -416,6 +416,11 @@
         "type": "string"
       },
       {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
         "internalType": "string",
         "name": "status",
         "type": "string"
@@ -456,6 +461,11 @@
         "internalType": "string",
         "name": "serviceCode",
         "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
       },
       {
         "internalType": "string",
