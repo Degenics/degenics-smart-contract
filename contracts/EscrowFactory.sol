@@ -18,9 +18,13 @@ contract EscrowFactory is Base {
             seller,
             amount
         );
+        reg(address(newEscrow));
         return address(newEscrow);
     }
 
-
+    function reg(address _escrow) internal {
+        uint index = eternalStorage.addUint(keccak256("escrow.count"), 1);
+        eternalStorage.setAddress(keccak256(abi.encodePacked("escrows", index)),_escrow );
+    }
 
 }
