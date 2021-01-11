@@ -68,13 +68,16 @@ contract Degenics is Base {
         return getLabInstance().serviceByIndex(labAccount, index);
     }
 
-    function registerSpecimen(address labAccount, string memory serviceCode) public {
+    function registerSpecimen(address labAccount, string memory serviceCode, string memory pubKey) public {
         
         string memory number = specimen.registerSpecimen(msg.sender, labAccount, serviceCode);
         address escrow = createEscrow(msg.sender, labAccount, eternalStorage.getUint(keccak256(abi.encodePacked("lab.service.price", labAccount, serviceCode))));
 
         eternalStorage.setAddress(keccak256(abi.encodePacked("Specimen.escrow", number)),  escrow); 
         lastNumber[msg.sender]  = number;
+        if(bytes(eternalStorage.getString(keccak256(abi.encodePacked("pubkey", msg.sender)))).length == 0){
+            eternalStorage.setString(keccak256(abi.encodePacked("pubkey", msg.sender)),  pubKey); 
+        }        
         emit NewSpecimen(labAccount, serviceCode);
     }
 
@@ -88,13 +91,15 @@ contract Degenics is Base {
 
     function specimenByNumber(string memory _number) public view returns(
         string memory number, address owner, address labAccount, string memory serviceCode, 
-        uint timestamp, string memory status){  
-        return specimen.specimenByNumber(_number) ;
+        uint timestamp, string memory status, string memory pubkey){  
+        (number, owner, labAccount, serviceCode, timestamp, status)  =  specimen.specimenByNumber(_number);
+        pubkey = eternalStorage.getString(keccak256(abi.encodePacked("pubkey", owner)));
+        return (number, owner, labAccount, serviceCode, timestamp, status, pubkey);
     }
 
     function specimenByIndex(uint index) public view returns(
         string memory number,address owner, address labAccount, string memory serviceCode, 
-        uint timestamp, string memory status){        
+        uint timestamp, string memory status, string memory pubkey){        
         string memory number =  eternalStorage.getString(keccak256(abi.encodePacked("Specimen",msg.sender, index )));   
         return specimenByNumber(number);
     }
