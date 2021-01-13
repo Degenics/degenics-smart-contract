@@ -343,6 +343,11 @@
         "internalType": "string",
         "name": "serviceCode",
         "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "pubKey",
+        "type": "string"
       }
     ],
     "name": "registerSpecimen",
@@ -350,7 +355,7 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0xfe021544"
+    "signature": "0x8280fc3a"
   },
   {
     "constant": true,
@@ -424,6 +429,11 @@
         "internalType": "string",
         "name": "status",
         "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "pubkey",
+        "type": "string"
       }
     ],
     "payable": false,
@@ -470,6 +480,11 @@
       {
         "internalType": "string",
         "name": "status",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "pubkey",
         "type": "string"
       }
     ],

@@ -171,11 +171,11 @@ module.exports = async function(deployer,network, accounts) {
             // console.log(await instances.Degenics.serviceByIndex(accounts[1], 2))
             // console.log(await instances.Degenics.serviceByIndex(accounts[1], 3))
 
-            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', {from: accounts[8]})
+            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', '12123', {from: accounts[8]})
             // console.log( await instances.Degenics.getLastNumber({from: accounts[8]}))
-            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-1', {from: accounts[9]})
+            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-1', '12123', {from: accounts[9]})
             // console.log( await instances.Degenics.getLastNumber({from: accounts[9]}))
-            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-2', {from: accounts[7]})
+            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-2', '12123', {from: accounts[7]})
             // console.log( await instances.Degenics.getLastNumber({from: accounts[7]}))
 
             // let number = await instances.Degenics.getLastNumber({from: accounts[8]})

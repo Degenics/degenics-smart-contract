@@ -260,6 +260,11 @@
         "internalType": "string",
         "name": "json",
         "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "pubKey",
+        "type": "string"
       }
     ],
     "name": "addAdditionalData",
@@ -267,7 +272,7 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0xa2175b4a"
+    "signature": "0xbd944a26"
   },
   {
     "constant": false,

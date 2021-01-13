@@ -102,8 +102,11 @@ contract Lab is Base {
         eternalStorage.setBool(keccak256(abi.encodePacked("lab.service.active", msg.sender, code)), active);
     }
 
-    function addAdditionalData(string memory json) public onlyLab{
+    function addAdditionalData(string memory json, string memory pubKey) public onlyLab{
         eternalStorage.setString(keccak256(abi.encodePacked("lab.additionalData", msg.sender)), json );
+        if(bytes(eternalStorage.getString(keccak256(abi.encodePacked("pubkey", msg.sender)))).length == 0){
+            eternalStorage.setString(keccak256(abi.encodePacked("pubkey", msg.sender)),  pubKey); 
+        } 
     }
 
     function addServiceAdditionalData(string memory code, string memory jsonData) public onlyLab{
