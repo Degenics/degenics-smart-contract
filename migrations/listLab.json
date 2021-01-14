@@ -1,99 +1,519 @@
 [
-    {"name": "Lab 1", 
-    "country": "Indonesia", 
-    "city":"Jakarta",
-    "address": "0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B", 
-    "additionalData":{
-        "address": "Jl. Merpati no 1 Jakarta  Barat",
-        "image": "http://lab.com/image/office.jpg",
-        "phone": "0210052525821"
+    {
+      "name":"Lab 1",
+      "country":"Indonesia",
+      "city":"Jakarta",
+      "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
+      "additionalData":{
+        "address":"Jl. Merpati no 1 Jakarta  Barat",
+        "image":"http://lab.com/image/office.jpg",
+        "phone":"0210052525821"
+      },
+      "services":[
+        {
+          "code":"T1",
+          "serviceName":"DNA Test",
+          "description":"description of test",
+          "price":100,
+          "additionalData":{
+            "icon":"fab fa-adn",
+            "url":""
+          }
+        },
+        {
+          "code":"COV-19",
+          "serviceName":"Covid-19",
+          "description":"Get tested for Covid-19 immunity",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-virus"
+          }
+        },
+        {
+          "code":"EXCE",
+          "serviceName":"Exercise",
+          "description":"Exercise recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-weight-lifter"
+          }
+        },
+        {
+          "code":"DIET",
+          "serviceName":"Diet",
+          "description":"Diet recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-food-apple"
+          }
+        },
+        {
+          "code":"GENE",
+          "serviceName":"Genetic Traits",
+          "description":"Get to know what\\'s in your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-dna"
+          }
+        },
+        {
+          "code":"SUPP",
+          "serviceName":"Suppplement",
+          "description":"Supplement recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-pill"
+          }
+        },
+        {
+          "code":"ANCE",
+          "serviceName":"Ancestry",
+          "description":"Ancestry information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-family-tree"
+          }
+        },
+        {
+          "code":"SKIN",
+          "serviceName":"Skin Care",
+          "description":"Skin traits information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"$dgi-skin"
+          }
+        }
+      ]
     },
-    "services":[
-        {  "code":"T1", 
-            "serviceName":"DNA Test", 
-            "description":"description of test",
-            "price":100, 
-            "additionalData":{"icon": "fab fa-adn", "url": ""}}
-    ]},
-    {"name": "Lab 2", 
-        "country": "Indonesia", 
-        "city":"Jakarta",
-        "address": "0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B", 
-        "additionalData":{
-            "address": "Jl. Merpati no 1 Jakarta  Barat",
-            "image": "http://lab.com/image/office.jpg",
-            "phone": "0210052525821"
+    {
+      "name":"Lab 2",
+      "country":"Indonesia",
+      "city":"Jakarta",
+      "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
+      "additionalData":{
+        "address":"Jl. Merpati no 1 Jakarta  Barat",
+        "image":"http://lab.com/image/office.jpg",
+        "phone":"0210052525821"
+      },
+      "services":[
+        {
+          "code":"T1",
+          "serviceName":"DNA Test",
+          "description":"description of test",
+          "price":100,
+          "additionalData":{
+            "icon":"fab fa-adn",
+            "url":""
+          }
         },
-        "services":[
-            {  "code":"T1", 
-                "serviceName":"DNA Test", 
-                "description":"description of test",
-                "price":100, 
-                "additionalData":{"icon": "fab fa-adn", "url": ""}}
-        ]},
-    {"name": "Lab 3", 
-        "country": "Indonesia", 
-        "city":"Surabaya",
-        "address": "0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B", 
-        "additionalData":{
-            "address": "Jl. Merpati no 1 Jakarta  Barat",
-            "image": "http://lab.com/image/office.jpg",
-            "phone": "0210052525821"
+        {
+          "code":"COV-19",
+          "serviceName":"Covid-19",
+          "description":"Get tested for Covid-19 immunity",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-virus"
+          }
         },
-        "services":[
-            {  "code":"T1", 
-                "serviceName":"DNA Test", 
-                "description":"description of test",
-                "price":100, 
-                "additionalData":{"icon": "fab fa-adn", "url": ""}}
-        ]},
-    {"name": "Lab My 1", 
-        "country": "Malaysia", 
-        "city":"Kuala Lumpur",
-        "address": "0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B", 
-        "additionalData":{
-            "address": "Jl. Merpati no 1 Jakarta  Barat",
-            "image": "http://lab.com/image/office.jpg",
-            "phone": "0210052525821"
+        {
+          "code":"EXCE",
+          "serviceName":"Exercise",
+          "description":"Exercise recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-weight-lifter"
+          }
         },
-        "services":[
-            {  "code":"T1", 
-                "serviceName":"DNA Test", 
-                "description":"description of test",
-                "price":100, 
-                "additionalData":{"icon": "fab fa-adn", "url": ""}}
-        ]},
-    {"name": "Lab My 2", 
-        "country": "Malaysia", 
-        "city":"Kuala Lumpur",
-        "address": "0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B", 
-        "additionalData":{
-            "address": "Jl. Merpati no 1 Jakarta  Barat",
-            "image": "http://lab.com/image/office.jpg",
-            "phone": "0210052525821"
+        {
+          "code":"DIET",
+          "serviceName":"Diet",
+          "description":"Diet recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-food-apple"
+          }
         },
-        "services":[
-            {  "code":"T1", 
-                "serviceName":"DNA Test", 
-                "description":"description of test",
-                "price":100, 
-                "additionalData":{"icon": "fab fa-adn", "url": ""}}
-        ]},
-    {"name": "Lab Pinang 1", 
-        "country": "Malaysia", 
-        "city":"Pinang",
-        "address": "0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B", 
-        "additionalData":{
-            "address": "Jl. Merpati no 1 Jakarta  Barat",
-            "image": "http://lab.com/image/office.jpg",
-            "phone": "0210052525821"
+        {
+          "code":"GENE",
+          "serviceName":"Genetic Traits",
+          "description":"Get to know what\\'s in your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-dna"
+          }
         },
-        "services":[
-            {  "code":"T1", 
-                "serviceName":"DNA Test", 
-                "description":"description of test",
-                "price":100, 
-                "additionalData":{"icon": "fab fa-adn", "url": ""}}
-        ]}    
-
-]
+        {
+          "code":"SUPP",
+          "serviceName":"Suppplement",
+          "description":"Supplement recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-pill"
+          }
+        },
+        {
+          "code":"ANCE",
+          "serviceName":"Ancestry",
+          "description":"Ancestry information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-family-tree"
+          }
+        },
+        {
+          "code":"SKIN",
+          "serviceName":"Skin Care",
+          "description":"Skin traits information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"$dgi-skin"
+          }
+        }
+      ]
+    },
+    {
+      "name":"Lab 3",
+      "country":"Indonesia",
+      "city":"Surabaya",
+      "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
+      "additionalData":{
+        "address":"Jl. Merpati no 1 Jakarta  Barat",
+        "image":"http://lab.com/image/office.jpg",
+        "phone":"0210052525821"
+      },
+      "services":[
+        {
+          "code":"T1",
+          "serviceName":"DNA Test",
+          "description":"description of test",
+          "price":100,
+          "additionalData":{
+            "icon":"fab fa-adn",
+            "url":""
+          }
+        },
+        {
+          "code":"COV-19",
+          "serviceName":"Covid-19",
+          "description":"Get tested for Covid-19 immunity",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-virus"
+          }
+        },
+        {
+          "code":"EXCE",
+          "serviceName":"Exercise",
+          "description":"Exercise recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-weight-lifter"
+          }
+        },
+        {
+          "code":"DIET",
+          "serviceName":"Diet",
+          "description":"Diet recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-food-apple"
+          }
+        },
+        {
+          "code":"GENE",
+          "serviceName":"Genetic Traits",
+          "description":"Get to know what\\'s in your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-dna"
+          }
+        },
+        {
+          "code":"SUPP",
+          "serviceName":"Suppplement",
+          "description":"Supplement recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-pill"
+          }
+        },
+        {
+          "code":"ANCE",
+          "serviceName":"Ancestry",
+          "description":"Ancestry information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-family-tree"
+          }
+        },
+        {
+          "code":"SKIN",
+          "serviceName":"Skin Care",
+          "description":"Skin traits information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"$dgi-skin"
+          }
+        }
+      ]
+    },
+    {
+      "name":"Lab My 1",
+      "country":"Malaysia",
+      "city":"Kuala Lumpur",
+      "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
+      "additionalData":{
+        "address":"Jl. Merpati no 1 Jakarta  Barat",
+        "image":"http://lab.com/image/office.jpg",
+        "phone":"0210052525821"
+      },
+      "services":[
+        {
+          "code":"T1",
+          "serviceName":"DNA Test",
+          "description":"description of test",
+          "price":100,
+          "additionalData":{
+            "icon":"fab fa-adn",
+            "url":""
+          }
+        },
+        {
+          "code":"COV-19",
+          "serviceName":"Covid-19",
+          "description":"Get tested for Covid-19 immunity",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-virus"
+          }
+        },
+        {
+          "code":"EXCE",
+          "serviceName":"Exercise",
+          "description":"Exercise recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-weight-lifter"
+          }
+        },
+        {
+          "code":"DIET",
+          "serviceName":"Diet",
+          "description":"Diet recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-food-apple"
+          }
+        },
+        {
+          "code":"GENE",
+          "serviceName":"Genetic Traits",
+          "description":"Get to know what\\'s in your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-dna"
+          }
+        },
+        {
+          "code":"SUPP",
+          "serviceName":"Suppplement",
+          "description":"Supplement recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-pill"
+          }
+        },
+        {
+          "code":"ANCE",
+          "serviceName":"Ancestry",
+          "description":"Ancestry information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-family-tree"
+          }
+        },
+        {
+          "code":"SKIN",
+          "serviceName":"Skin Care",
+          "description":"Skin traits information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"$dgi-skin"
+          }
+        }
+      ]
+    },
+    {
+      "name":"Lab My 2",
+      "country":"Malaysia",
+      "city":"Kuala Lumpur",
+      "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
+      "additionalData":{
+        "address":"Jl. Merpati no 1 Jakarta  Barat",
+        "image":"http://lab.com/image/office.jpg",
+        "phone":"0210052525821"
+      },
+      "services":[
+        {
+          "code":"T1",
+          "serviceName":"DNA Test",
+          "description":"description of test",
+          "price":100,
+          "additionalData":{
+            "icon":"fab fa-adn",
+            "url":""
+          }
+        },
+        {
+          "code":"COV-19",
+          "serviceName":"Covid-19",
+          "description":"Get tested for Covid-19 immunity",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-virus"
+          }
+        },
+        {
+          "code":"EXCE",
+          "serviceName":"Exercise",
+          "description":"Exercise recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-weight-lifter"
+          }
+        },
+        {
+          "code":"DIET",
+          "serviceName":"Diet",
+          "description":"Diet recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-food-apple"
+          }
+        },
+        {
+          "code":"GENE",
+          "serviceName":"Genetic Traits",
+          "description":"Get to know what\\'s in your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-dna"
+          }
+        },
+        {
+          "code":"SUPP",
+          "serviceName":"Suppplement",
+          "description":"Supplement recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-pill"
+          }
+        },
+        {
+          "code":"ANCE",
+          "serviceName":"Ancestry",
+          "description":"Ancestry information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-family-tree"
+          }
+        },
+        {
+          "code":"SKIN",
+          "serviceName":"Skin Care",
+          "description":"Skin traits information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"$dgi-skin"
+          }
+        }
+      ]
+    },
+    {
+      "name":"Lab Pinang 1",
+      "country":"Malaysia",
+      "city":"Pinang",
+      "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
+      "additionalData":{
+        "address":"Jl. Merpati no 1 Jakarta  Barat",
+        "image":"http://lab.com/image/office.jpg",
+        "phone":"0210052525821"
+      },
+      "services":[
+        {
+          "code":"T1",
+          "serviceName":"DNA Test",
+          "description":"description of test",
+          "price":100,
+          "additionalData":{
+            "icon":"fab fa-adn",
+            "url":""
+          }
+        },
+        {
+          "code":"COV-19",
+          "serviceName":"Covid-19",
+          "description":"Get tested for Covid-19 immunity",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-virus"
+          }
+        },
+        {
+          "code":"EXCE",
+          "serviceName":"Exercise",
+          "description":"Exercise recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-weight-lifter"
+          }
+        },
+        {
+          "code":"DIET",
+          "serviceName":"Diet",
+          "description":"Diet recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-food-apple"
+          }
+        },
+        {
+          "code":"GENE",
+          "serviceName":"Genetic Traits",
+          "description":"Get to know what\\'s in your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-dna"
+          }
+        },
+        {
+          "code":"SUPP",
+          "serviceName":"Suppplement",
+          "description":"Supplement recommendation based on your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-pill"
+          }
+        },
+        {
+          "code":"ANCE",
+          "serviceName":"Ancestry",
+          "description":"Ancestry information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"mdi-family-tree"
+          }
+        },
+        {
+          "code":"SKIN",
+          "serviceName":"Skin Care",
+          "description":"Skin traits information from your genes",
+          "price":100,
+          "additionalData":{
+            "icon":"$dgi-skin"
+          }
+        }
+      ]
+    }
+  ]
+  

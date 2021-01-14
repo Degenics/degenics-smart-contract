@@ -19959,6 +19959,88 @@
       "address": "0x2D1AF2B829097C9aa9d41CF79aE11B53eEbD30b7",
       "transactionHash": "0xfb107cbfc2f958baf408f6e57ede003b75fb34789a15208576ea0312e4aa698e"
     },
+    "2018": {
+      "events": {
+        "0x8ca5fb51ec76e0fba6b96a8e596d91cb678f7fef4fe4edb108915e4097821071": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "country",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "city",
+              "type": "string"
+            }
+          ],
+          "name": "NewLab",
+          "type": "event"
+        },
+        "0xd9491d9a8b6f9be10814b9a1d01c06052d9a61354c5b8c6d00c53e0839661362": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "labAccount",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "service",
+              "type": "string"
+            }
+          ],
+          "name": "NewService",
+          "type": "event"
+        },
+        "0x6f51c966b226abb2a973172a0489909f6e0729ae419cda220fb82e9bab7d43ca": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "labAccount",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "Code",
+              "type": "string"
+            }
+          ],
+          "name": "NewSpecimen",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x243642142c1cAf42Da9f2A1eC158706Fef54834a",
+      "transactionHash": "0xd1e3dc69a0ff19a52700b01ed665dcc5b624b0ad6a017ce51f4a6c0dee3594d3"
+    },
     "5777": {
       "events": {
         "0x8ca5fb51ec76e0fba6b96a8e596d91cb678f7fef4fe4edb108915e4097821071": {
@@ -20038,12 +20120,12 @@
         }
       },
       "links": {},
-      "address": "0xFe5E78BA2343BddADd1cF5525cDD28d66Da61F34",
-      "transactionHash": "0xe4a5c183c3a3686427b9b63e4e4a1103803eee5bdef794de88092b3378225ff3"
+      "address": "0x220729DC06B26F092a21Cc8fDf584a3a81Ba52dE",
+      "transactionHash": "0x3727915dbbb5b0183929347349056c37716ae225efc001ab7f64cf94fc175dd9"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-01-11T07:10:20.644Z",
+  "updatedAt": "2021-01-13T12:48:26.880Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
