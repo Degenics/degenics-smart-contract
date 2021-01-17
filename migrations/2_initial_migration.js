@@ -23,7 +23,7 @@ function addContractInfo(name, address){
 }
 
 const listArtifact = {
-    EternalStorage,
+    // EternalStorage,
     DegenicsLog,
     Lab,
     Account, 
