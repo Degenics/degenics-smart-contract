@@ -43,14 +43,14 @@ contract SpecimenTracking is Base {
     }
 
     function receiveSpecimen(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
-        require(checkStatus(number, "Sending") ||  checkStatus(number, "Received") || (checkStatus(number, "New") && checkPayment(number)) , 
+        require(checkStatus(number, "Sending")  || (checkStatus(number, "New") && checkPayment(number)) , 
             "Only sending specimen" );
         setStatus(number, "Received");
         degenicsLog.addSpecimenLog(number, "receive", remark);
     }
 
     function rejectSpecimen(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
-        require(checkStatus(number, "Sending") || (checkStatus(number, "New") &&   checkPayment(number)) , "Only sending specimen" );
+        require(checkStatus(number, "Sending") ||  checkStatus(number, "Received") ||  (checkStatus(number, "New") &&   checkPayment(number)) , "Only sending specimen" );
         setStatus(number, "Reject");
         degenicsLog.addSpecimenLog(number, "reject", remark);
     }
