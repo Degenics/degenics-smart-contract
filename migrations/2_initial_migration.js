@@ -23,7 +23,7 @@ function addContractInfo(name, address){
 }
 
 const listArtifact = {
-    // EternalStorage,
+    EternalStorage,
     DegenicsLog,
     Lab,
     Account, 
@@ -242,6 +242,7 @@ async function dummyData(instances, accounts){
         }
         
         let i = 1;
+        let labs = []
         for(let lab of labList){
             let labAddress = accounts[i].address == undefined ? accounts[i] : accounts[i].address 
             await instances.Lab.register(labAddress, lab.name, lab.country, lab.city); 
@@ -259,7 +260,8 @@ async function dummyData(instances, accounts){
                     await sendTransaction(instances.Lab.address, data, account)
                     data = labContract.methods.addServiceAdditionalData(service.code,JSON.stringify(service.additionalData)).encodeABI()
                     await sendTransaction(instances.Lab.address, data, account)
-                }
+                } 
+                labs.push(Object.assign(accounts[i], {lab : lab.name}))
             }else if(labContract == null) {                
                 if(lab.additionalData != undefined) {                
                     await instances.Lab.addAdditionalData(JSON.stringify(lab.additionalData),'test', {from: accounts[i]})
@@ -275,6 +277,7 @@ async function dummyData(instances, accounts){
             }
             i++                
         }
+        if(labs.length >0) console.log(labs)
     } catch (error) {
         console.log('error', error.message)
     }
