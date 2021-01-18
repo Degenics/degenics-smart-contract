@@ -94,11 +94,7 @@ contract Base {
     }
 
     function compareString(string memory _string1, string memory _string2) internal pure returns(bool) {
-        if(bytes(_string1).length != bytes(_string2).length) {
-            return false;
-        } else {
-            return keccak256(abi.encodePacked(_string1)) == keccak256(abi.encodePacked(_string2));
-        }
+       return keccak256(abi.encodePacked(_string1)) == keccak256(abi.encodePacked(_string2));
     }
     
 }

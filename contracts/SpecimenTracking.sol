@@ -16,8 +16,7 @@ contract SpecimenTracking is Base {
     }
 
     modifier onlyLab(string memory number){
-        require(roleHas("lab", tx.origin) && 
-            eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))) == tx.origin,
+        require(eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))) == tx.origin,
             "Only lab");
         _;
     }
@@ -50,7 +49,8 @@ contract SpecimenTracking is Base {
     }
 
     function rejectSpecimen(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
-        require(checkStatus(number, "Sending") ||  checkStatus(number, "Received") || (checkStatus(number, "New") && checkPayment(number)) , "Only sending specimen" );
+        require(checkStatus(number, "Sending") ||  checkStatus(number, "Received") || (checkStatus(number, "New") && checkPayment(number)) , 
+            "Only sending specimen" );
         setStatus(number, "Reject");
         degenicsLog.addSpecimenLog(number, "reject", remark);
     }
@@ -99,6 +99,5 @@ contract SpecimenTracking is Base {
     
     function checkPayment(string memory number) public view onlyAllowContract returns(bool){
         return escrowBalance(number) >=  checkPrice(number);
-        // return true;
     }
 }
