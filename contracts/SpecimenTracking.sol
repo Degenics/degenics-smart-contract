@@ -64,8 +64,8 @@ contract SpecimenTracking is Base {
 
     function refund(string memory number) public onlyAllowContract onlyLab(number) {
         require(compareString(getStatus(number), "Received"), "Only Received specimen" );
-        setStatus(number, "Refounded");
-        degenicsLog.addSpecimenLog(number, "refounded",  "analysis so long, refund after 7 days by customer");
+        setStatus(number, "Refunded");
+        degenicsLog.addSpecimenLog(number, "refunded",  "analysis so long, refund after 7 days by customer");
     }
 
     function checkPrice(string memory number) internal view returns(uint){
