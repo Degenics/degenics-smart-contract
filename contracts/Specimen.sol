@@ -116,7 +116,6 @@ contract Specimen is Base {
         return string(result);
     }
 
-
 }
 
 //97J05EE1B531

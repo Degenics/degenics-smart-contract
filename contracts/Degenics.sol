@@ -122,6 +122,8 @@ contract Degenics is Base {
     }
 
     function analysisSucces(string memory number, string memory file, string memory remark) public {
+        require( now <= (eternalStorage.getUint(keccak256(abi.encodePacked("Specimen.receive.date", number))) +  1 weeks), 
+            "only valid 7 days after receive"  );
         specimenTracking.analysisSucces(number, file, remark);
         getEscrowInstance(number).forwardToSeller();
     }
@@ -130,17 +132,15 @@ contract Degenics is Base {
         return specimenTracking.getFile(number);
     }
 
-    function analysisFail(string memory number, string memory remark) public {
-        specimenTracking.analysisFail(number, remark);
-        getEscrowInstance(number).refundToBuyer();
-    }
+  
 
     function refund(string memory number) public{
         require(msg.sender == eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.owner",number ))), "Only owner specimen");
         require(specimenTracking.checkStatus(number,"received"), "Only received Specimen");
         require(
             (eternalStorage.getUint(keccak256(abi.encodePacked("Specimen.receive.date", number))) +  1 weeks)  < now  , "after 7 days received" );
-        specimenTracking.analysisFail(number, "analysis so long, refund after 7 days by customer");
+        specimenTracking.refund(number);
+        getEscrowInstance(number).refundToBuyer();
     }
 
     function escrowBalance(string memory number) internal view returns(uint){

@@ -58,7 +58,7 @@
         },
         {
           "code":"SUPP",
-          "serviceName":"Suppplement",
+          "serviceName":"Supplement",
           "description":"Supplement recommendation based on your genes",
           "price":100,
           "additionalData":{
@@ -144,7 +144,7 @@
         },
         {
           "code":"SUPP",
-          "serviceName":"Suppplement",
+          "serviceName":"Supplement",
           "description":"Supplement recommendation based on your genes",
           "price":100,
           "additionalData":{
@@ -230,7 +230,7 @@
         },
         {
           "code":"SUPP",
-          "serviceName":"Suppplement",
+          "serviceName":"Supplement",
           "description":"Supplement recommendation based on your genes",
           "price":100,
           "additionalData":{
@@ -316,7 +316,7 @@
         },
         {
           "code":"SUPP",
-          "serviceName":"Suppplement",
+          "serviceName":"Supplement",
           "description":"Supplement recommendation based on your genes",
           "price":100,
           "additionalData":{
@@ -402,7 +402,7 @@
         },
         {
           "code":"SUPP",
-          "serviceName":"Suppplement",
+          "serviceName":"Supplement",
           "description":"Supplement recommendation based on your genes",
           "price":100,
           "additionalData":{
@@ -488,7 +488,7 @@
         },
         {
           "code":"SUPP",
-          "serviceName":"Suppplement",
+          "serviceName":"Supplement",
           "description":"Supplement recommendation based on your genes",
           "price":100,
           "additionalData":{

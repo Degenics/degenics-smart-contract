@@ -29,11 +29,11 @@ contract DegenicsLog is Base {
         eternalStorage.setUint(keccak256(abi.encodePacked( "Specimen.log.time",number, index )), block.timestamp);
     }
 
-    function countSpecimenLog(string memory number) public onlyAllowContract returns(uint){
+    function countSpecimenLog(string memory number) public view  returns(uint){
         return eternalStorage.getUint(keccak256(abi.encodePacked( "Specimen.Log.count",number)));
     }
 
-    function specimenLogByIndex(string memory number, uint _index) public onlyAllowContract returns(uint index, 
+    function specimenLogByIndex(string memory number, uint _index) public view returns(uint index, 
         uint time, string memory logType, string memory log){
         
         index = _index;

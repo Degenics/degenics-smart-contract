@@ -51,20 +51,21 @@ contract SpecimenTracking is Base {
     function rejectSpecimen(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
         require(checkStatus(number, "Sending") ||  checkStatus(number, "Received") || (checkStatus(number, "New") && checkPayment(number)) , 
             "Only sending specimen" );
-        setStatus(number, "Reject");
-        degenicsLog.addSpecimenLog(number, "reject", remark);
+        setStatus(number, "Rejected");
+        degenicsLog.addSpecimenLog(number, "rejected", remark);
     }
 
     function analysisSucces(string memory number, string memory file, string memory remark) public onlyAllowContract onlyLab(number) {
         require(checkStatus(number, "Received"), "Only Received specimen" );
-        setStatus(number, "Succes");
-        degenicsLog.addSpecimenLog(number, "succes", remark);
+        setStatus(number, "Success");
+        degenicsLog.addSpecimenLog(number, "success", remark);
         eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.file",number)), file);
     }
 
-    function analysisFail(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
+    function refund(string memory number) public onlyAllowContract onlyLab(number) {
         require(compareString(getStatus(number), "Received"), "Only Received specimen" );
-        degenicsLog.addSpecimenLog(number, "fail", remark);
+        setStatus(number, "Refounded");
+        degenicsLog.addSpecimenLog(number, "refounded",  "analysis so long, refund after 7 days by customer");
     }
 
     function checkPrice(string memory number) internal view returns(uint){
