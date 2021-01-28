@@ -13,10 +13,10 @@
       {
         "code":"T1",
         "serviceName":"DNA Test",
-        "description":"description of test",
+        "description":"Get your DNA analyzed for genomic information",
         "price":100,
         "additionalData":{
-          "icon":"fab fa-adn",
+          "icon":"mdi-dna",
           "url":""
         }
       },
@@ -99,10 +99,10 @@
       {
         "code":"T1",
         "serviceName":"DNA Test",
-        "description":"description of test",
+        "description":"Get your DNA analyzed for genomic information",
         "price":100,
         "additionalData":{
-          "icon":"fab fa-adn",
+          "icon":"mdi-dna",
           "url":""
         }
       },
@@ -185,10 +185,10 @@
       {
         "code":"T1",
         "serviceName":"DNA Test",
-        "description":"description of test",
+        "description":"Get your DNA analyzed for genomic information",
         "price":100,
         "additionalData":{
-          "icon":"fab fa-adn",
+          "icon":"mdi-dna",
           "url":""
         }
       },
@@ -271,10 +271,10 @@
       {
         "code":"T1",
         "serviceName":"DNA Test",
-        "description":"description of test",
+        "description":"Get your DNA analyzed for genomic information",
         "price":100,
         "additionalData":{
-          "icon":"fab fa-adn",
+          "icon":"mdi-dna",
           "url":""
         }
       },
@@ -357,10 +357,10 @@
       {
         "code":"T1",
         "serviceName":"DNA Test",
-        "description":"description of test",
+        "description":"Get your DNA analyzed for genomic information",
         "price":100,
         "additionalData":{
-          "icon":"fab fa-adn",
+          "icon":"mdi-dna",
           "url":""
         }
       },
@@ -443,10 +443,10 @@
       {
         "code":"T1",
         "serviceName":"DNA Test",
-        "description":"description of test",
+        "description":"Get your DNA analyzed for genomic information",
         "price":100,
         "additionalData":{
-          "icon":"fab fa-adn",
+          "icon":"mdi-dna",
           "url":""
         }
       },
