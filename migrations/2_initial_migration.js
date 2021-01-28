@@ -24,14 +24,14 @@ function addContractInfo(name, address){
 
 const listArtifact = {
     EternalStorage,
-    DegenicsLog,
-    Lab,
-    Account, 
-    Location, 
-    SpecimenTracking,
-    Specimen,
-    EscrowFactory,
-    Degenics
+    // DegenicsLog,
+    // Lab,
+    // Account, 
+    // Location, 
+    // SpecimenTracking,
+    // Specimen,
+    // EscrowFactory,
+    // Degenics
 } 
 
 var web3 = null
@@ -43,6 +43,11 @@ module.exports = async function(deployer,network, accounts) {
 
     if(network != 'development') web3 = await getWeb3(network)
     // const getInstance = getContractInstance(web3)
+    // console.log()
+
+    if(web3){
+        console.log(web3.eth.accounts[0]) 
+    }
 
     let instances = {}
 
@@ -247,8 +252,7 @@ async function dummyData(instances, accounts){
             let labAddress = accounts[i].address == undefined ? accounts[i] : accounts[i].address 
             await instances.Lab.register(labAddress, lab.name, lab.country, lab.city); 
             if(labContract && (typeof accounts[i].privateKey != 'undefined') ){
-                console.log('add by web3')
-                
+                console.log('add by web3')                
                 let account = await web3.eth.accounts
                                 .privateKeyToAccount(accounts[i].privateKey)
                 let pubKey = accounts[i].publicKey ? accounts[i].publicKey : web3.utils.bytesToHex(EthUtil.privateToPublic(EthUtil.toBuffer(`${account.privateKey}`)))
@@ -329,6 +333,29 @@ async function sendTransaction(toAddress, data, account){
         console.log('error sendTransaction')
     }
     return null
+}
+
+async function sendETH(account, toAddress, amount) {
+    const Tx = require('ethereumjs-tx').Transaction;
+    let nonce = await web3.eth.getTransactionCount( account.address);
+    let object = {
+        nonce: nonce,
+        to: toAddress,
+        gasPrice: web3.utils.toHex(
+            web3.utils.toWei('0', 'gwei')
+        ),
+        gasLimit: web3.utils.toHex('0xfffff'),
+        value: web3.utils.toWei(amount, 'ether'),
+    };
+    try {
+        const tx = new Tx(object); 
+        let raw = await web3.eth.accounts.signTransaction(object, account.privateKey)   
+        let receipt = await web3.eth.sendSignedTransaction(raw.rawTransaction);
+        return receipt
+    } catch (error) {
+        console.log('error sendTransaction')
+        return false
+    }
 }
 
 

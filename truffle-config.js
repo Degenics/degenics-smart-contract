@@ -64,6 +64,8 @@ module.exports = {
 
     ropsten: {
       provider: privateKeyProvider,
+      // host: "https://ropsten.infura.io/v3/29af44da822c44d8a436e76a7557142d",
+      // port: 443,
       network_id: "*",
       gasPrice: 300,  // (default: 100 gwei)
       gas: "8000000",           // Gas sent with each transaction (default: ~6700000)
