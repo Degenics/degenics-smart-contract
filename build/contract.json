@@ -1,8 +1,56 @@
 {
   "EternalStorage": {
     "name": "EternalStorage",
-    "address": "0xC71b2a26FB5D6E1b61633bE661b046a2D14A24E2",
+    "address": "0x4Ea1847a655c36b8A2E8F37690c99C753Bd505c9",
     "updated": true,
-    "lastUpdate": "2021-01-20T11:35:28.975Z"
+    "lastUpdate": "2021-01-28T20:01:22.045Z"
+  },
+  "DegenicsLog": {
+    "name": "DegenicsLog",
+    "address": "0x474fce101CDf9AC595f6898a8e8643259E4e620E",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:25.512Z"
+  },
+  "Lab": {
+    "name": "Lab",
+    "address": "0x73EF4127001DFa2cfCF4dc4ece7fF642D9a1a791",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:30.006Z"
+  },
+  "Account": {
+    "name": "Account",
+    "address": "0x381499A23Ba69Ece720b87d06c0f8C5E91a4254e",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:33.636Z"
+  },
+  "Location": {
+    "name": "Location",
+    "address": "0x026930bdF507cEE401146dD21470764B9468C77e",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:37.310Z"
+  },
+  "SpecimenTracking": {
+    "name": "SpecimenTracking",
+    "address": "0x327cCb2bD73e306A8DEdEce8B0DcE5d523c6Ef18",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:41.857Z"
+  },
+  "Specimen": {
+    "name": "Specimen",
+    "address": "0x46a2bbcDA241924503441ae285cd0d476F69dDc9",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:45.780Z"
+  },
+  "EscrowFactory": {
+    "name": "EscrowFactory",
+    "address": "0x21b2C727Ffb8EE2E18f21031D82d43f44D30Abb7",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:49.495Z"
+  },
+  "Degenics": {
+    "name": "Degenics",
+    "address": "0x4aA2e751A7eE526b450b8C488bF7ee2f5Eaf9d3a",
+    "updated": true,
+    "lastUpdate": "2021-01-28T20:01:54.035Z"
   }
 }

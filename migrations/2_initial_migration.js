@@ -11,7 +11,7 @@ const EscrowFactory = artifacts.require("EscrowFactory");
 const jsonfile = require('jsonfile');
 // const { nextTick } = require('process');
 
-const { getWeb3, getContractInstance } = require("./helpers")
+const { getWeb3, getContractInstance, getOwnerAccount } = require("./helpers")
 
 
 const filename = './build/contract.json';
@@ -24,14 +24,14 @@ function addContractInfo(name, address){
 
 const listArtifact = {
     EternalStorage,
-    // DegenicsLog,
-    // Lab,
-    // Account, 
-    // Location, 
-    // SpecimenTracking,
-    // Specimen,
-    // EscrowFactory,
-    // Degenics
+    DegenicsLog,
+    Lab,
+    Account, 
+    Location, 
+    SpecimenTracking,
+    Specimen,
+    EscrowFactory,
+    Degenics
 } 
 
 var web3 = null
@@ -41,14 +41,23 @@ module.exports = async function(deployer,network, accounts) {
 
     console.log(`owner ${accounts[0]}`)
 
-    if(network != 'development') web3 = await getWeb3(network)
-    // const getInstance = getContractInstance(web3)
-    // console.log()
-
-    if(web3){
-        console.log(web3.eth.accounts[0]) 
+    var ownerAccount 
+    try {
+        if(network != 'development') {
+            web3 = await getWeb3(network)
+            ownerAccount = getOwnerAccount()
+        }
+    
+        if(web3){
+            let ownerBalance = web3.utils.fromWei(await web3.eth.getBalance(accounts[0]), 'ether' )
+            console.log(`Owner balance : ${ownerBalance} eth`) 
+        }
+    
+    } catch (error) {
+        console.log('error 58')
     }
 
+   
     let instances = {}
 
     try {
@@ -118,89 +127,6 @@ module.exports = async function(deployer,network, accounts) {
             
             await dummyData(instances, accounts)
             await showLab(instances)
-           
-
-            // console.log(countCountry)
-
-
-            // await instances.Lab.register(accounts[1], 'Lab 1', 'Indenesia', 'Jakarta');
-            // await instances.Lab.register(accounts[2], 'Lab 2', 'Indenesia', 'Jakarta');
-            // await instances.Lab.register(accounts[3], 'Lab 3', 'Indenesia', 'Surabaya');
-            // await instances.Lab.register(accounts[4], 'Lab KL', 'Malaysia', 'Kuala Lumpur');
-            // await instances.Lab.register(accounts[5], 'Lab KL 1', 'Malaysia', 'Kuala Lumpur');
-            // let labCount = await instances.Degenics.labCount( 'Indenesia', 'Jakarta');
-            // console.log(labCount)
-            // console.log(await instances.Location.countCountry())
-            // console.log(await instances.Location.countryByIndex(1))
-            // console.log(await instances.Location.cityByIndex("Indenesia", 1))
-
-            // console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',1))
-            // console.log(await instances.Degenics.labByIndex('Indenesia', 'Jakarta',2))
-            // await instances.Lab.registerService('TEST-1', 'Test title 1 lab 1', 'desciption 1', 100,  {from:accounts[1]});
-            // await instances.Lab.registerService('TEST-2', 'Test title 2 lab 1', 'desciption 1', 100,  {from:accounts[1]});
-            // await instances.Lab.registerService('TEST-3', 'Test title 3 lab 1', 'desciption 1', 100,  {from:accounts[1]});
-
-            // await instances.Lab.registerService('TEST-1', 'Test title 1 lab 2', 'desciption 1', 100, {from:accounts[2]});
-            // await instances.Lab.registerService('TEST-2', 'Test title 2 lab 3', 'desciption 1', 100, {from:accounts[2]});
-
-            // console.log(await instances.Degenics.serviceCount(accounts[1]))
-            // console.log(await instances.Degenics.serviceCount(accounts[2]))
-
-            // console.log(await instances.Degenics.serviceByIndex(accounts[1], 1))
-            // console.log(await instances.Degenics.serviceByIndex(accounts[1], 2))
-            // console.log(await instances.Degenics.serviceByIndex(accounts[1], 3))
-
-            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-3', '12123', {from: accounts[8]})
-            // console.log( await instances.Degenics.getLastNumber({from: accounts[8]}))
-            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-1', '12123', {from: accounts[9]})
-            // console.log( await instances.Degenics.getLastNumber({from: accounts[9]}))
-            // await instances.Degenics.registerSpecimen(accounts[1],'TEST-2', '12123', {from: accounts[7]})
-            // console.log( await instances.Degenics.getLastNumber({from: accounts[7]}))
-
-            // let number = await instances.Degenics.getLastNumber({from: accounts[8]})
-            // console.log('number', number)
-            // console.log(await instances.Degenics.specimenByNumber(number))
-            // let excrow = await instances.Degenics.getEscrow(number); 
-            // console.log(excrow)
-
-            // console.log(await instances.Degenics.specimenCount({from: accounts[1]}))
-            // console.log(await instances.Degenics.specimenByIndex(1, {from: accounts[1]}))
-
-            // console.log('send----------------------------------------------------------------')
-            // await instances.Degenics.sendSpecimen(number, "send test", {from: accounts[8]})
-            // console.log(await instances.Degenics.specimenByNumber(number))
-            // console.log('receive----------------------------------------------------------------')
-            // await instances.Degenics.receiveSpecimen(number, "receive test", {from: accounts[1]})
-            // console.log(await instances.Degenics.specimenByNumber(number))
-            // console.log('succes----------------------------------------------------------------')
-            // await instances.Degenics.analysisSucces(number, "test.txt", "succes test", {from: accounts[1]})
-            // console.log(await instances.Degenics.specimenByNumber(number))
-            // console.log('file',await instances.Degenics.getFile(number, {from: accounts[8]}))
-            // console.log('----------------------------------------------------------------')
-
-            // let labCountSpecimen = await instances.Degenics.specimenCount({from:accounts[1]})
-            // let custCountSpecimen = await instances.Degenics.specimenCount({from:accounts[8]})
-
-            // console.log('labCountSpecimen:',labCountSpecimen, '\n','custCountSpecimen:', custCountSpecimen) 
-            
-            // for(let i =1; i <=labCountSpecimen; i++ ){
-            //     console.log(await instances.Degenics.specimenByIndex(i, {from:accounts[1]}))
-            // }
-
-            // for(let i =1; i <=custCountSpecimen; i++ ){
-            //     console.log(await instances.Degenics.specimenByIndex(i, {from:accounts[8]}))
-            // }
-
-            // console.log()
-
-
-
-
-            // console.log('toBase32', await instances.Degenics.toBase32('0x2a2225a909b75597391aa279682427d26f247fc67d0b2d1afac919988ba8f5eb', {from: accounts[1]}))
-            
-            // console.log('toBase32', await instances.Degenics.toBase32('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', {from: accounts[1]}))
-
-            
 
         } catch (error) {
             console.log('error')
@@ -220,6 +146,13 @@ module.exports = async function(deployer,network, accounts) {
         } catch (error) {
             console.log('error ropsten')
         }
+    } else if(network=='privateNet'){
+        try {
+            await dummyData(instances, accounts, ownerAccount)
+            await showLab(instances)    
+        } catch (error) {
+            console.log('error ropsten')
+        }
     }
 
     for(let key in listArtifact){
@@ -229,7 +162,7 @@ module.exports = async function(deployer,network, accounts) {
     await jsonfile.writeFile(filename, contractInfo, {spaces: 2, EOL: '\r\n'});
 }
 
-async function dummyData(instances, accounts){
+async function dummyData(instances, accounts, faucetAccount){
     var EthUtil = require('ethereumjs-util');
     try {
         const labList = await jsonfile.readFileSync('./migrations/listLab.json')
@@ -250,16 +183,24 @@ async function dummyData(instances, accounts){
         let labs = []
         for(let lab of labList){
             let labAddress = accounts[i].address == undefined ? accounts[i] : accounts[i].address 
-            await instances.Lab.register(labAddress, lab.name, lab.country, lab.city); 
+            await instances.Lab.register(labAddress, lab.name, lab.country, lab.city);
+            i++             
+        }
+        i = 1
+        for(let lab of labList){
+            let labAddress = accounts[i].address == undefined ? accounts[i] : accounts[i].address 
             if(labContract && (typeof accounts[i].privateKey != 'undefined') ){
-                console.log('add by web3')                
+                console.log(`--------------------------------------------\n${lab.name} add by web3`)                
+                if(faucetAccount) await sendETH(faucetAccount,labAddress, '1' )
                 let account = await web3.eth.accounts
                                 .privateKeyToAccount(accounts[i].privateKey)
                 let pubKey = accounts[i].publicKey ? accounts[i].publicKey : web3.utils.bytesToHex(EthUtil.privateToPublic(EthUtil.toBuffer(`${account.privateKey}`)))
                 let addData = JSON.stringify({address: `Jl. Nuri No.${i}`})
                 let data = labContract.methods.addAdditionalData(addData, pubKey).encodeABI()
                 await sendTransaction(instances.Lab.address, data, account)
+                console.log(`${lab.services.length} service:`)
                 for(let service of lab.services){
+                    console.log(`    add service ${service.serviceName}`)
                     data = labContract.methods.registerService(service.code, service.serviceName, service.description, service.price).encodeABI()
                     await sendTransaction(instances.Lab.address, data, account)
                     data = labContract.methods.addServiceAdditionalData(service.code,JSON.stringify(service.additionalData)).encodeABI()
@@ -279,9 +220,11 @@ async function dummyData(instances, accounts){
                     }                    
                 }
             }
-            i++                
+            i++   
         }
-        if(labs.length >0) console.log(labs)
+        if(labs.length >0) {
+            await jsonfile.writeFile('./migrations/labs.json', labs, {spaces: 2, EOL: '\r\n'});
+        }
     } catch (error) {
         console.log('error', error.message)
     }
@@ -317,11 +260,9 @@ async function sendTransaction(toAddress, data, account){
     let object = {
         nonce: nonce,
         to: web3.utils.toHex(toAddress),
-        gasPrice: web3.utils.toHex(
-            web3.utils.toWei('0', 'gwei')
-        ),
-        gasLimit: web3.utils.toHex('0xfffff'),
-        value: 0,
+        gasPrice: 1000,
+        gasLimit: 9000000,
+        value:  '0x0',
         data,
     };
     try {
@@ -330,30 +271,30 @@ async function sendTransaction(toAddress, data, account){
         let receipt = await web3.eth.sendSignedTransaction(raw.rawTransaction);
         return receipt
     } catch (error) {
-        console.log('error sendTransaction')
+        console.log('error sendTransaction',error.message)
     }
     return null
 }
 
 async function sendETH(account, toAddress, amount) {
-    const Tx = require('ethereumjs-tx').Transaction;
-    let nonce = await web3.eth.getTransactionCount( account.address);
-    let object = {
-        nonce: nonce,
-        to: toAddress,
-        gasPrice: web3.utils.toHex(
-            web3.utils.toWei('0', 'gwei')
-        ),
-        gasLimit: web3.utils.toHex('0xfffff'),
-        value: web3.utils.toWei(amount, 'ether'),
-    };
+    
     try {
+        const Tx = require('ethereumjs-tx').Transaction;
+        let nonce = await web3.eth.getTransactionCount( account.address);
+        let object = {
+            nonce: nonce,
+            to: toAddress,
+            gasPrice: 1000,
+            gasLimit: 60000,
+            value: web3.utils.toHex(web3.utils.toWei(amount, 'ether')),
+        };
         const tx = new Tx(object); 
         let raw = await web3.eth.accounts.signTransaction(object, account.privateKey)   
         let receipt = await web3.eth.sendSignedTransaction(raw.rawTransaction);
+        console.log(`succes send ${amount} eth to ${toAddress} `)
         return receipt
     } catch (error) {
-        console.log('error sendTransaction')
+        console.log('error sendETH', error.message)
         return false
     }
 }
