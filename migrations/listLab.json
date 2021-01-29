@@ -50,7 +50,7 @@
       {
         "code":"GENE",
         "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
+        "description":"Get to know what's in your genes",
         "price":100,
         "additionalData":{
           "icon":"mdi-dna"
@@ -88,10 +88,10 @@
   {
     "name":"Lab 2",
     "country":"Indonesia",
-    "city":"Jakarta",
+    "city":"Bandung",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"Jl. Ganesha No.10 Bandung",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
@@ -136,7 +136,7 @@
       {
         "code":"GENE",
         "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
+        "description":"Get to know what's in your genes",
         "price":100,
         "additionalData":{
           "icon":"mdi-dna"
@@ -177,7 +177,7 @@
     "city":"Surabaya",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"Jl. Raya Rungkut Surabaya",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
@@ -222,7 +222,7 @@
       {
         "code":"GENE",
         "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
+        "description":"Get to know what's in your genes",
         "price":100,
         "additionalData":{
           "icon":"mdi-dna"
@@ -263,7 +263,7 @@
     "city":"Kuala Lumpur",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"1016, Jalan Sultan Ismail, 50250 Kuala Lumpur",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
@@ -308,7 +308,7 @@
       {
         "code":"GENE",
         "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
+        "description":"Get to know what's in your genes",
         "price":100,
         "additionalData":{
           "icon":"mdi-dna"
@@ -346,10 +346,10 @@
   {
     "name":"Lab My 2",
     "country":"Malaysia",
-    "city":"Kuala Lumpur",
+    "city":"Bukit Mertajam",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"565, Jalan Sg.Rambai, Seberang Perai, 14000 Bukit Mertajam",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
@@ -394,7 +394,7 @@
       {
         "code":"GENE",
         "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
+        "description":"Get to know what's in your genes",
         "price":100,
         "additionalData":{
           "icon":"mdi-dna"
@@ -430,12 +430,12 @@
     ]
   },
   {
-    "name":"Lab Pinang 1",
+    "name":"Lab My 3",
     "country":"Malaysia",
-    "city":"Pinang",
+    "city":"Butterworth",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"Jalan Bagan Luar 12000 Butterworth",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
@@ -480,7 +480,7 @@
       {
         "code":"GENE",
         "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
+        "description":"Get to know what's in your genes",
         "price":100,
         "additionalData":{
           "icon":"mdi-dna"
