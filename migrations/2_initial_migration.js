@@ -195,7 +195,8 @@ async function dummyData(instances, accounts, faucetAccount){
                 let account = await web3.eth.accounts
                                 .privateKeyToAccount(accounts[i].privateKey)
                 let pubKey = accounts[i].publicKey ? accounts[i].publicKey : web3.utils.bytesToHex(EthUtil.privateToPublic(EthUtil.toBuffer(`${account.privateKey}`)))
-                let addData = JSON.stringify({address: `Jl. Nuri No.${i}`})
+                // let addData = JSON.stringify({address: `Jl. Nuri No.${i}`})
+                let addData = JSON.stringify(lab.additionalData)
                 let data = labContract.methods.addAdditionalData(addData, pubKey).encodeABI()
                 await sendTransaction(instances.Lab.address, data, account)
                 console.log(`${lab.services.length} service:`)
