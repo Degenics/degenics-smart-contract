@@ -136,7 +136,7 @@ module.exports = async function(deployer,network, accounts) {
             await dummyData(instances, accounts)
             await showLab(instances)    
         } catch (error) {
-            console.log('error ropsten')
+            console.log('error ropsten') 
         }
         
     } else if(network=='gcpnet'){
