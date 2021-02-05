@@ -21,8 +21,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -97,8 +97,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -173,8 +173,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -250,8 +250,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -327,8 +327,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -404,8 +404,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -481,8 +481,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -558,8 +558,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
@@ -635,8 +635,8 @@
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 severity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
           "icon":"mdi-virus"
