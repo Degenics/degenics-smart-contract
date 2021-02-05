@@ -1,56 +1,56 @@
 {
   "EternalStorage": {
     "name": "EternalStorage",
-    "address": "0xd4315bD46371F39694d2F531c0c47a240F940a36",
+    "address": "0x02A9a45fa8E1259190883F5AbadD1a263c5B8367",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:11.954Z"
+    "lastUpdate": "2021-02-05T08:37:12.867Z"
   },
   "DegenicsLog": {
     "name": "DegenicsLog",
-    "address": "0xAcF785f28d2435f4BaE1dcf682f73046Ac9D2574",
+    "address": "0x5165B3884A28a247a3FD1725Dfb1ceC457C7bB19",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:15.603Z"
+    "lastUpdate": "2021-02-05T08:37:15.179Z"
   },
   "Lab": {
     "name": "Lab",
-    "address": "0xe35706D89Eee664f4E2388BC78D5f2A3311b3AED",
+    "address": "0x1a6A89A959ffba6793F6b55983A8EECE48A3aA70",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:19.887Z"
+    "lastUpdate": "2021-02-05T08:37:18.593Z"
   },
   "Account": {
     "name": "Account",
-    "address": "0x3e57eafD64f990C88D0451FB54f5ECb6686769cD",
+    "address": "0x54db2199FD67AF11CB9C63aC87b5d795A4613eab",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:23.118Z"
+    "lastUpdate": "2021-02-05T08:37:20.772Z"
   },
   "Location": {
     "name": "Location",
-    "address": "0xaBc9c9830e828109Ac518b42e081cDeccfb0eBf5",
+    "address": "0xdBACE4a73d88d77e022a5B95850fEB2252721981",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:25.847Z"
+    "lastUpdate": "2021-02-05T08:37:22.962Z"
   },
   "SpecimenTracking": {
     "name": "SpecimenTracking",
-    "address": "0x78723D9F3866381Aa14e45fA3803F774AD0350F3",
+    "address": "0x713920Bd2F6883EC810043895039379c51e17d82",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:31.057Z"
+    "lastUpdate": "2021-02-05T08:37:27.286Z"
   },
   "Specimen": {
     "name": "Specimen",
-    "address": "0xf9dC458F46972bD9106b9E957eFb719bd0426d4E",
+    "address": "0x85833c009D9b9e4D4C1220245D296Af6C71631e1",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:34.149Z"
+    "lastUpdate": "2021-02-05T08:37:31.259Z"
   },
   "EscrowFactory": {
     "name": "EscrowFactory",
-    "address": "0x540DFB6b6BC71d70F75db481A8F515df25BF3Ec3",
+    "address": "0x8EeA886457F0FCdb364286aF8FE7760A1Bb1c952",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:38.473Z"
+    "lastUpdate": "2021-02-05T08:37:34.812Z"
   },
   "Degenics": {
     "name": "Degenics",
-    "address": "0x4490259b486c1e106101c0900d7E5Be64e6a30F9",
+    "address": "0xea7dD87a677eD89227BF3d4E1b5357De22ce9ab7",
     "updated": true,
-    "lastUpdate": "2021-02-04T06:37:42.756Z"
+    "lastUpdate": "2021-02-05T08:37:40.176Z"
   }
 }
