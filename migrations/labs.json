@@ -21,36 +21,36 @@
     "address": "0x7aecc7e1d6ceed36299d23795e9aa04afe54b511",
     "privateKey": "0x51b9b51df0ac4bfb8a86055920f42cb0b5a4f67e5b7045e7f03458cab24f5502",
     "publicKey": "0x3ffba92c59105b8f9e83a1dbaa4d5e674a05b72f4436a91a7950fd3095f73f9d2d3d0c0e07bd4a6d74f4be190cc7a4400be41aa91005185fbb16f22285d1102a",
-    "lab": "Lab 1"
+    "lab": "Jakarta Lab"
   },
   {
     "address": "0xd6cdf7147862190c719f74d982b7b645da1e486e",
     "privateKey": "0xfdcf2686c1318c4de25fb3176c297ca1e374b1dd82e36bd75afc3d84220af29a",
     "publicKey": "0xe42e70f0d0fa721d8f975de07a3e17596458b7486eb2b4bd38cba3855b554018a16d3f2d759b14d38b9e6626212d6bb9469a32b3f79ae621bdd2195abf34bea4",
-    "lab": "Lab 2"
+    "lab": "Bandung Lab"
   },
   {
     "address": "0x60548c0994284e9a6ea4ee554b5b3ec96860cd86",
     "privateKey": "0x36649c389d5127317178ccde4ecbd08ef7aded269b58942b26e025be68bc13fb",
     "publicKey": "0x88f5d7f582afc0e2550855a68198a926133a02404a135c279e9318c4472f7d51d6c9fa2176f2b83f9ae1a0f6a43e4ca878861c4d805ede71e8378ee4cd5f9feb",
-    "lab": "Lab 3"
+    "lab": "Surabaya Lab"
   },
   {
     "address": "0x531d41a5913484b9a440fce8dd29577e545f9e60",
     "privateKey": "0x607080377547916ab5b6ad89389629278d68f1b7993c815eac27bcd0322b3a0c",
     "publicKey": "0x12d4a1651553fcf7d9b22b27c6eb74f898335248d58758f72dd9647daf9d816022c0f8b807a07de513e50f0a438242e34c93106299f286971015e2df128c595d",
-    "lab": "Lab My 1"
+    "lab": "Kuala Lumpur Lab"
   },
   {
     "address": "0xb5d548b6c3af36eb322c7179774e469a72155b47",
     "privateKey": "0xf22dbd9c104d53fce90db3295e7fc724e1de6752646a06c3da075c6e70f04a5b",
     "publicKey": "0x8a14363d8d468f010837e0930ea1bc84fb15d527e9b2f7a3fe0cec4cea9908051a956599d6906c3eaa946333d6c2dedc040d07532a5cb9b3cbcf1472c7ace77a",
-    "lab": "Lab My 2"
+    "lab": "Bukit Mertajam Lab"
   },
   {
     "address": "0x7962a633f52b2ede6b478e400a4b5f9ef6b985cf",
     "privateKey": "0x9eb6c336f23f177d2cb9df863a5e04f705ed0a1332e59d71c1d90003b8a30c4b",
     "publicKey": "0x523b86ae247b63feef2a2b430361c85a3f8c8672636c5b20cf488892de39ef006e5cc185bf846ee873797533fdd96518959fe753a982ca10e945287034015eb1",
-    "lab": "Lab My 3"
+    "lab": "Butterworth Lab"
   }
 ]
