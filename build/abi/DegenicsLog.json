@@ -55,7 +55,7 @@
     "signature": "0xf609cabd"
   },
   {
-    "constant": false,
+    "constant": true,
     "inputs": [
       {
         "internalType": "string",
@@ -72,12 +72,12 @@
       }
     ],
     "payable": false,
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function",
     "signature": "0x3c0b6733"
   },
   {
-    "constant": false,
+    "constant": true,
     "inputs": [
       {
         "internalType": "string",
@@ -114,7 +114,7 @@
       }
     ],
     "payable": false,
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function",
     "signature": "0x0e2eb2a1"
   }

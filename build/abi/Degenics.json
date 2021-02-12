@@ -633,19 +633,14 @@
         "internalType": "string",
         "name": "number",
         "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "remark",
-        "type": "string"
       }
     ],
-    "name": "analysisFail",
+    "name": "refund",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function",
-    "signature": "0xaa088937"
+    "signature": "0xfe5f2e88"
   },
   {
     "constant": false,

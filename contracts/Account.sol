@@ -33,4 +33,8 @@ contract Account is Base {
         return "";
     }
 
+    function getPublicKey(address _address) public view returns(string memory){
+        return eternalStorage.getString(keccak256(abi.encodePacked("pubkey",_address)));
+    }
+
 }

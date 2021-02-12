@@ -28,6 +28,10 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 const privateKey = "382fc147da719e97dacb0ac65979e80958ce835687f1d19dd0a2d9d0f35c9f19";
 const privateKeyProvider = new HDWalletProvider(privateKey, "https://ropsten.infura.io/v3/29af44da822c44d8a436e76a7557142d");
 
+const privateKey_priv = "b888d6c5144b166917699b806af2feac9bf76121fcbee47ce7eed11bd15bb310";
+// const privateKey_priv = "c6fa489d9e1de97ff0905a02ab216d204be6f60c0868bb7496ed680044647709"
+const privateKeyProvider_priv = new HDWalletProvider(privateKey_priv, "http://34.101.116.238:8545/");
+
 
 module.exports = {
   /**
@@ -64,9 +68,19 @@ module.exports = {
 
     ropsten: {
       provider: privateKeyProvider,
+      // host: "https://ropsten.infura.io/v3/29af44da822c44d8a436e76a7557142d",
+      // port: 443,
       network_id: "*",
       gasPrice: 300,  // (default: 100 gwei)
       gas: "8000000",           // Gas sent with each transaction (default: ~6700000)
+    },
+    privateNet: {
+      provider: privateKeyProvider_priv,
+      host: "34.101.116.238",
+      port: 8545,
+      network_id: "*",
+      gasPrice: 1000,  // (default: 100 gwei)
+      gas: "0xfffffffffffff",           // Gas sent with each transaction (default: ~6700000)
     },
 // 
     // Another network with more advanced options...

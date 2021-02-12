@@ -1,6 +1,255 @@
 [
   {
-    "name":"Lab 1",
+    "name":"Denver Lab",
+    "country":"USA",
+    "city":"Denver",
+    "additionalData":{
+      "address":"2199 S University Blvd, Denver, CO 80208, United States",
+      "image":"http://lab.com/image/office.jpg",
+      "phone":"+1 303-1234-1234"
+    },
+    "services":[
+      {
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
+        "additionalData":{
+          "icon":"mdi-dna",
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
+        }
+      },
+      {
+        "code":"COV-19",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
+        }
+      },
+      {
+        "code":"EXCE",
+        "serviceName":"Exercise",
+        "description":"Exercise recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
+        }
+      },
+      {
+        "code":"DIET",
+        "serviceName":"Diet",
+        "description":"Diet recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
+        }
+      },
+      {
+        "code":"SUPP",
+        "serviceName":"Supplement",
+        "description":"Supplement recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
+        }
+      },
+      {
+        "code":"ANCE",
+        "serviceName":"Ancestry",
+        "description":"Ancestry information from your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
+        }
+      },
+      {
+        "code":"SKIN",
+        "serviceName":"Skin Care",
+        "description":"Skin traits information from your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
+        }
+      }
+    ]
+  },
+  {
+    "name":"Colorado Springs Lab",
+    "country":"USA",
+    "city":"Colorado Springs",
+    "additionalData":{
+      "address":"1420 Austin Bluffs Pkwy, Colorado Springs, CO 80918, United States",
+      "image":"http://lab.com/image/office.jpg",
+      "phone":"+1 303-1234-1234"
+    },
+    "services":[
+      {
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire your genome and keep it on the blockchain. Reuse it whenever you like.",
+        "price":300,
+        "additionalData":{
+          "icon":"mdi-dna",
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
+        }
+      },
+      {
+        "code":"COV-19",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
+        }
+      },
+      {
+        "code":"EXCE",
+        "serviceName":"Exercise",
+        "description":"Exercise recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
+        }
+      },
+      {
+        "code":"DIET",
+        "serviceName":"Diet",
+        "description":"Diet recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
+        }
+      },
+      {
+        "code":"SUPP",
+        "serviceName":"Supplement",
+        "description":"Supplement recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
+        }
+      },
+      {
+        "code":"ANCE",
+        "serviceName":"Ancestry",
+        "description":"Ancestry information from your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
+        }
+      },
+      {
+        "code":"SKIN",
+        "serviceName":"Skin Care",
+        "description":"Skin traits information from your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
+        }
+      }
+    ]
+  },
+  {
+    "name":"Boulder Lab",
+    "country":"USA",
+    "city":"Boulder",
+    "additionalData":{
+      "address":"Boulder, CO 80309, United States",
+      "image":"http://lab.com/image/office.jpg",
+      "phone":"+1 303-1234-1234"
+    },
+    "services":[
+      {
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
+        "additionalData":{
+          "icon":"mdi-dna",
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
+        }
+      },
+      {
+        "code":"COV-19",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
+        }
+      },
+      {
+        "code":"EXCE",
+        "serviceName":"Exercise",
+        "description":"Exercise recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
+        }
+      },
+      {
+        "code":"DIET",
+        "serviceName":"Diet",
+        "description":"Diet recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
+        }
+      },
+      {
+        "code":"SUPP",
+        "serviceName":"Supplement",
+        "description":"Supplement recommendation based on your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
+        }
+      },
+      {
+        "code":"ANCE",
+        "serviceName":"Ancestry",
+        "description":"Ancestry information from your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
+        }
+      },
+      {
+        "code":"SKIN",
+        "serviceName":"Skin Care",
+        "description":"Skin traits information from your genes",
+        "price":100,
+        "additionalData":{
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
+        }
+      }
+    ]
+  },
+  {
+    "name":"Jakarta Lab",
     "country":"Indonesia",
     "city":"Jakarta",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
@@ -11,22 +260,24 @@
     },
     "services":[
       {
-        "code":"T1",
-        "serviceName":"DNA Test",
-        "description":"Get your DNA analyzed for genomic information",
-        "price":100,
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
         "additionalData":{
           "icon":"mdi-dna",
-          "url":""
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
         }
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 immunity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
-          "icon":"mdi-virus"
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
         }
       },
       {
@@ -35,7 +286,8 @@
         "description":"Exercise recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-weight-lifter"
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
         }
       },
       {
@@ -44,25 +296,18 @@
         "description":"Diet recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-food-apple"
-        }
-      },
-      {
-        "code":"GENE",
-        "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
-        "price":100,
-        "additionalData":{
-          "icon":"mdi-dna"
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
         }
       },
       {
         "code":"SUPP",
-        "serviceName":"Suppplement",
+        "serviceName":"Supplement",
         "description":"Supplement recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-pill"
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
         }
       },
       {
@@ -71,7 +316,8 @@
         "description":"Ancestry information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-family-tree"
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
         }
       },
       {
@@ -80,39 +326,42 @@
         "description":"Skin traits information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"$dgi-skin"
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
         }
       }
     ]
   },
   {
-    "name":"Lab 2",
+    "name":"Bandung Lab",
     "country":"Indonesia",
-    "city":"Jakarta",
+    "city":"Bandung",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"Jl. Ganesha No.10 Bandung",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
     "services":[
       {
-        "code":"T1",
-        "serviceName":"DNA Test",
-        "description":"Get your DNA analyzed for genomic information",
-        "price":100,
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
         "additionalData":{
           "icon":"mdi-dna",
-          "url":""
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
         }
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 immunity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
-          "icon":"mdi-virus"
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
         }
       },
       {
@@ -121,7 +370,8 @@
         "description":"Exercise recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-weight-lifter"
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
         }
       },
       {
@@ -130,25 +380,18 @@
         "description":"Diet recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-food-apple"
-        }
-      },
-      {
-        "code":"GENE",
-        "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
-        "price":100,
-        "additionalData":{
-          "icon":"mdi-dna"
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
         }
       },
       {
         "code":"SUPP",
-        "serviceName":"Suppplement",
+        "serviceName":"Supplement",
         "description":"Supplement recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-pill"
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
         }
       },
       {
@@ -157,7 +400,8 @@
         "description":"Ancestry information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-family-tree"
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
         }
       },
       {
@@ -166,39 +410,42 @@
         "description":"Skin traits information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"$dgi-skin"
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
         }
       }
     ]
   },
   {
-    "name":"Lab 3",
+    "name":"Surabaya Lab",
     "country":"Indonesia",
     "city":"Surabaya",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"Jl. Raya Rungkut Surabaya",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
     "services":[
       {
-        "code":"T1",
-        "serviceName":"DNA Test",
-        "description":"Get your DNA analyzed for genomic information",
-        "price":100,
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
         "additionalData":{
           "icon":"mdi-dna",
-          "url":""
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
         }
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 immunity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
-          "icon":"mdi-virus"
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
         }
       },
       {
@@ -207,7 +454,8 @@
         "description":"Exercise recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-weight-lifter"
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
         }
       },
       {
@@ -216,25 +464,18 @@
         "description":"Diet recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-food-apple"
-        }
-      },
-      {
-        "code":"GENE",
-        "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
-        "price":100,
-        "additionalData":{
-          "icon":"mdi-dna"
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
         }
       },
       {
         "code":"SUPP",
-        "serviceName":"Suppplement",
+        "serviceName":"Supplement",
         "description":"Supplement recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-pill"
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
         }
       },
       {
@@ -243,7 +484,8 @@
         "description":"Ancestry information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-family-tree"
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
         }
       },
       {
@@ -252,39 +494,42 @@
         "description":"Skin traits information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"$dgi-skin"
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
         }
       }
     ]
   },
   {
-    "name":"Lab My 1",
+    "name":"Kuala Lumpur Lab",
     "country":"Malaysia",
     "city":"Kuala Lumpur",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"1016, Jalan Sultan Ismail, 50250 Kuala Lumpur",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
     "services":[
       {
-        "code":"T1",
-        "serviceName":"DNA Test",
-        "description":"Get your DNA analyzed for genomic information",
-        "price":100,
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
         "additionalData":{
           "icon":"mdi-dna",
-          "url":""
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
         }
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 immunity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
-          "icon":"mdi-virus"
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
         }
       },
       {
@@ -293,7 +538,8 @@
         "description":"Exercise recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-weight-lifter"
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
         }
       },
       {
@@ -302,25 +548,18 @@
         "description":"Diet recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-food-apple"
-        }
-      },
-      {
-        "code":"GENE",
-        "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
-        "price":100,
-        "additionalData":{
-          "icon":"mdi-dna"
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
         }
       },
       {
         "code":"SUPP",
-        "serviceName":"Suppplement",
+        "serviceName":"Supplement",
         "description":"Supplement recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-pill"
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
         }
       },
       {
@@ -329,7 +568,8 @@
         "description":"Ancestry information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-family-tree"
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
         }
       },
       {
@@ -338,39 +578,42 @@
         "description":"Skin traits information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"$dgi-skin"
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
         }
       }
     ]
   },
   {
-    "name":"Lab My 2",
+    "name":"Bukit Mertajam Lab",
     "country":"Malaysia",
-    "city":"Kuala Lumpur",
+    "city":"Bukit Mertajam",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"565, Jalan Sg.Rambai, Seberang Perai, 14000 Bukit Mertajam",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
     "services":[
       {
-        "code":"T1",
-        "serviceName":"DNA Test",
-        "description":"Get your DNA analyzed for genomic information",
-        "price":100,
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
         "additionalData":{
           "icon":"mdi-dna",
-          "url":""
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
         }
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 immunity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
-          "icon":"mdi-virus"
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
         }
       },
       {
@@ -379,7 +622,8 @@
         "description":"Exercise recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-weight-lifter"
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
         }
       },
       {
@@ -388,25 +632,18 @@
         "description":"Diet recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-food-apple"
-        }
-      },
-      {
-        "code":"GENE",
-        "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
-        "price":100,
-        "additionalData":{
-          "icon":"mdi-dna"
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
         }
       },
       {
         "code":"SUPP",
-        "serviceName":"Suppplement",
+        "serviceName":"Supplement",
         "description":"Supplement recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-pill"
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
         }
       },
       {
@@ -415,7 +652,8 @@
         "description":"Ancestry information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-family-tree"
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
         }
       },
       {
@@ -424,39 +662,42 @@
         "description":"Skin traits information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"$dgi-skin"
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
         }
       }
     ]
   },
   {
-    "name":"Lab Pinang 1",
+    "name":"Butterworth Lab",
     "country":"Malaysia",
-    "city":"Pinang",
+    "city":"Butterworth",
     "address":"0xDf9Fc631946814Ed6e211880646b70Bc6cABA18B",
     "additionalData":{
-      "address":"Jl. Merpati no 1 Jakarta  Barat",
+      "address":"Jalan Bagan Luar 12000 Butterworth",
       "image":"http://lab.com/image/office.jpg",
       "phone":"0210052525821"
     },
     "services":[
       {
-        "code":"T1",
-        "serviceName":"DNA Test",
-        "description":"Get your DNA analyzed for genomic information",
-        "price":100,
+        "code":"GENE",
+        "serviceName":"Whole Genome Sequencing",
+        "description":"Sequence your entire genome and keep it on the blockchain. Reuse it whenever you like",
+        "price":300,
         "additionalData":{
           "icon":"mdi-dna",
-          "url":""
+          "url":"",
+          "longDescription": "Analyze your entire genomic DNA sequence. Genomic information has been instrumental in identifying inherited disorders, characterizing the mutations that drive cancer progression, and tracking disease outbreaks."
         }
       },
       {
         "code":"COV-19",
-        "serviceName":"Covid-19",
-        "description":"Get tested for Covid-19 immunity",
+        "serviceName":"Potential COVID-19 Severity",
+        "description":"Genetic variants in a region of chromosome 3 have been linked with respiratory failure in severe COVID-19. Test yourself for these variants.",
         "price":100,
         "additionalData":{
-          "icon":"mdi-virus"
+          "icon":"mdi-virus",
+          "longDescription": "Certain gene variants on one region on chromosome 3 contribute to the severity of coronavirus infection. Test yourself to identify these gene variants associated with respiratory failure in severe covid-19."
         }
       },
       {
@@ -465,7 +706,8 @@
         "description":"Exercise recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-weight-lifter"
+          "icon":"mdi-weight-lifter",
+          "longDescription": "Find an effective workout based on your genetic code to maximize your workout gains."
         }
       },
       {
@@ -474,25 +716,18 @@
         "description":"Diet recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-food-apple"
-        }
-      },
-      {
-        "code":"GENE",
-        "serviceName":"Genetic Traits",
-        "description":"Get to know what\\'s in your genes",
-        "price":100,
-        "additionalData":{
-          "icon":"mdi-dna"
+          "icon":"mdi-food-apple",
+          "longDescription": "A healthier you by personalizing your diet and nutrition intake based on your dietary DNA profile."
         }
       },
       {
         "code":"SUPP",
-        "serviceName":"Suppplement",
+        "serviceName":"Supplement",
         "description":"Supplement recommendation based on your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-pill"
+          "icon":"mdi-pill",
+          "longDescription": "Customize your supplements intake based on your DNA test results to help you meet your nutritional goals."
         }
       },
       {
@@ -501,7 +736,8 @@
         "description":"Ancestry information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"mdi-family-tree"
+          "icon":"mdi-family-tree",
+          "longDescription": "Estimate your genetic ethnicity and reveal your heritage based on specific location on your genome."
         }
       },
       {
@@ -510,7 +746,8 @@
         "description":"Skin traits information from your genes",
         "price":100,
         "additionalData":{
-          "icon":"$dgi-skin"
+          "icon":"$dgi-skin",
+          "longDescription": "Base your skincare on your genetic make-up to improve your skin."
         }
       }
     ]

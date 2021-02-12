@@ -16,8 +16,7 @@ contract SpecimenTracking is Base {
     }
 
     modifier onlyLab(string memory number){
-        require(roleHas("lab", tx.origin) && 
-            eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))) == tx.origin,
+        require(eternalStorage.getAddress(keccak256(abi.encodePacked( "Specimen.lab",number ))) == tx.origin,
             "Only lab");
         _;
     }
@@ -43,27 +42,30 @@ contract SpecimenTracking is Base {
     }
 
     function receiveSpecimen(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
-        require(checkStatus(number, "Sending") || (checkStatus(number, "New") && checkPayment(number) ) , "Only sending specimen" );
+        require(checkStatus(number, "Sending")  || (checkStatus(number, "New") && checkPayment(number)) , 
+            "Only sending specimen" );
         setStatus(number, "Received");
         degenicsLog.addSpecimenLog(number, "receive", remark);
     }
 
     function rejectSpecimen(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
-        require(checkStatus(number, "Sending") || (checkStatus(number, "New") &&   checkPayment(number)) , "Only sending specimen" );
-        setStatus(number, "Reject");
-        degenicsLog.addSpecimenLog(number, "reject", remark);
+        require(checkStatus(number, "Sending") ||  checkStatus(number, "Received") || (checkStatus(number, "New") && checkPayment(number)) , 
+            "Only sending specimen" );
+        setStatus(number, "Rejected");
+        degenicsLog.addSpecimenLog(number, "rejected", remark);
     }
 
     function analysisSucces(string memory number, string memory file, string memory remark) public onlyAllowContract onlyLab(number) {
         require(checkStatus(number, "Received"), "Only Received specimen" );
-        setStatus(number, "Succes");
-        degenicsLog.addSpecimenLog(number, "succes", remark);
+        setStatus(number, "Success");
+        degenicsLog.addSpecimenLog(number, "success", remark);
         eternalStorage.setString(keccak256(abi.encodePacked( "Specimen.file",number)), file);
     }
 
-    function analysisFail(string memory number, string memory remark) public onlyAllowContract onlyLab(number) {
+    function refund(string memory number) public onlyAllowContract onlyLab(number) {
         require(compareString(getStatus(number), "Received"), "Only Received specimen" );
-        degenicsLog.addSpecimenLog(number, "fail", remark);
+        setStatus(number, "Refunded");
+        degenicsLog.addSpecimenLog(number, "refunded",  "analysis so long, refund after 7 days by customer");
     }
 
     function checkPrice(string memory number) internal view returns(uint){
@@ -98,6 +100,5 @@ contract SpecimenTracking is Base {
     
     function checkPayment(string memory number) public view onlyAllowContract returns(bool){
         return escrowBalance(number) >=  checkPrice(number);
-        // return true;
     }
 }
